@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+// https://cs50.harvard.edu/x/2023/shorts/magic_numbers/
+#define R_INC 3
+#define R_DEC 4
+
+void usage(void) { printf("Usage: ./population START END\n"); }
+
+int main(int argc, char *argv[]) {
+  int start, end;
+
+  // check command-line arguments
+  if (argc != 3) {
+    usage();
+    return 1;
+  } else {
+    sscanf(argv[1], "%d", &start);
+    sscanf(argv[2], "%d", &end);
+  }
+
+  if (start < 9) {
+    printf("Error: The START need be greater than 9.\n");
+    usage();
+    return 1;
+  }
+
+  if (end < start) {
+    printf("Error: The END need be greater than START.\n");
+    usage();
+    return 1;
+  }
+
+  // calculate the number of years
+  float teste = (float)start;
+  int years = 0;
+
+  while (teste < end) {
+    teste = (teste * 13) / 12;
+    years++;
+  }
+  // print result
+  printf("Years: %i\n", years);
+  return 0;
+}
