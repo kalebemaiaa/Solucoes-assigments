@@ -1,0 +1,7 @@
+img = cv2.imread('palazzo.jpg')
+
+m_rotacao = np.array([[math.cos(theta), math.sin(theta)], [-math.sin(theta), math.cos(theta)]] )
+
+cv2.imwrite('teste.jpg',c)
+cv2.imshow("image", c)
+cv2.waitKey()
