@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+void usage(void) { printf("\nUsage:\n ./mario NUM\n\n"); }
+
+int main(int argc, char *argv[]) {
+  int n;
+
+  // check command-line arguments
+  if (argc != 2) {
+    usage();
+    return 1;
+  } else {
+    sscanf(argv[1], "%d", &n);
+  }
+
+  if (n < 1 || n > 8) {
+    printf("Error: NUM precisa ser entre 1 e 8.\n");
+    usage();
+    return 1;
+  }
+
+  // main block
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n; j++) {
+      if (j < n - 1 - i) {
+        printf(" ");
+      } else {
+        printf("#");
+      }
+    }
+    printf("\n");
+  }
+}
