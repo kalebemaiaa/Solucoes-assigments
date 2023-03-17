@@ -1,0 +1,55 @@
+#include <ctype.h>
+#include <stdbool.h>
+#include <stdio.h>
+
+// https://stackoverflow.com/a/29248688
+bool isNumber(char number[]) {
+  int i = 0;
+
+  if (number[0] == '-')
+    i = 1;
+  for (; number[i] != 0; i++) {
+    if (!isdigit(number[i]))
+      return false;
+  }
+  return true;
+}
+
+void usage(void) { printf("Usage:\n cash NUMBER\n"); }
+
+int calculate_quarters(int cents) { return (int)cents / 25; }
+
+int calculate_dimes(int cents) { return (int)cents / 10; }
+
+int calculate_nickels(int cents) { return (int)cents / 5; }
+
+int calculate_pennies(int cents) { return cents; }
+
+int main(int argc, char *argv[]) {
+
+  // recuperar valor entrada
+  int cents;
+  if (argc != 2 || !isNumber(argv[1])) {
+    usage();
+    return 1;
+  } else {
+    sscanf(argv[1], "%i", &cents);
+    if (cents <= 0) {
+      usage();
+      return 1;
+    }
+  }
+
+  // calculando moedas em uma ordem 'gulosa'
+  int quarters = calculate_quarters(cents);
+  cents = cents - quarters * 25;
+  int dimes = calculate_dimes(cents);
+  cents = cents - dimes * 10;
+  int nickels = calculate_nickels(cents);
+  cents = cents - nickels * 5;
+  int pennies = calculate_pennies(cents);
+
+  // somando numero moedas e imprimindo
+  int coins = quarters + dimes + nickels + pennies;
+  printf("%i\n", coins);
+}
