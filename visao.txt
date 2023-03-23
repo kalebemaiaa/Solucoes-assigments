@@ -1,7 +1,86 @@
-img = cv2.imread('palazzo.jpg')
+import cv2 as cv
+import sys
+import numpy as np
 
-m_rotacao = np.array([[math.cos(theta), math.sin(theta)], [-math.sin(theta), math.cos(theta)]] )
+def my_rotation(img, angulo, centro):
+    matriz_translacao = np.array([[1, 0, -centro[0]],[0,1,-centro[1]],[0,0,1]])
+    matriz_rotacao = np.array([[np.cos(angulo), -np.sin(angulo),0],[np.sin(angulo), np.cos(angulo),0],[0,0,1]])
+    inv_translacao = np.linalg.inv(matriz_translacao)
+    matriz_composicao = np.matmul(np.matmul(inv_translacao,matriz_rotacao),matriz_translacao)
+    
+    height, width = img.shape[:2]
+    
+    rotated_image = np.zeros((height,width,3), np.uint8)
+    m_comp_inv = np.linalg.inv(matriz_composicao)
+    
+    for linr in range(height):
+        for colr in range(width):
+            pos_rot = np.matrix([linr, colr, 1]).T
+            pos_orig = np.matmul(m_comp_inv, pos_rot)
+            lin = round(pos_orig[0,0]); col = round(pos_orig[1,0]);
+            
+            if (lin >=0 and lin < height) and (col >= 0 and col < width):
+                rotated_image[linr, colr] = img[int(pos_orig[0]), int(pos_orig[1])]
+                
+    return rotated_image
 
-cv2.imwrite('teste.jpg',c)
-cv2.imshow("image", c)
-cv2.waitKey()
+
+######################################################################
+def my_transformation(img, matriz):
+    height, width = img.shape[:2]
+    new_img = np.zeros((height,width,3), np.uint8)
+    
+    for linr in range(height):
+        for colr in range(width):
+            pos_rot = np.matrix([linr, colr, 1]).T
+            pos_orig = np.matmul(matriz, pos_rot)
+            
+            x = (matriz[0,0] * pos_rot[0] + matriz[0,1] * pos_rot[1]  + matriz[0,2] * pos_rot[2] ) / (matriz[2,0] * pos_rot[0] + matriz[2,1] * pos_rot[1]  + matriz[2,2] * pos_rot[2] )
+            y = (matriz[1,0] * pos_rot[0] + matriz[1,1] * pos_rot[1]  + matriz[1,2] * pos_rot[2] ) / (matriz[2,0] * pos_rot[0] + matriz[2,1] * pos_rot[1]  + matriz[2,2] * pos_rot[2] )
+            pos_rot[0] = x
+            pos_rot[1] = y
+            lin = round(pos_orig[0,0]); col = round(pos_orig[1,0]);
+            
+            if (lin >= 0 and lin < height) and (col >= 0 and col < width):
+                new_img[linr, colr] = img[int(pos_orig[0]), int(pos_orig[1])]
+    
+    return new_img
+
+######################################################################
+
+def get_tranformation(fonte, destino):
+    M_1 = np.zeros((3,3))
+    B = np.zeros((4,3))
+    for i in range(4):
+        for k in range(3):
+            M_1[i,k] = fonte[i,k]
+            B[i,k] = destino[i][k]
+            
+    
+fonte = [(1,2)]
+    
+get_tranformation([(1,2)], [(1,2)])
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
