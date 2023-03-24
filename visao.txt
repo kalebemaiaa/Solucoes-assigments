@@ -1,6 +1,5 @@
-import cv2 as cv
-import sys
 import numpy as np
+import cv2 as cv
 
 def my_rotation(img, angulo, centro):
     matriz_translacao = np.array([[1, 0, -centro[0]],[0,1,-centro[1]],[0,0,1]])
@@ -20,67 +19,42 @@ def my_rotation(img, angulo, centro):
             lin = round(pos_orig[0,0]); col = round(pos_orig[1,0]);
             
             if (lin >=0 and lin < height) and (col >= 0 and col < width):
-                rotated_image[linr, colr] = img[int(pos_orig[0]), int(pos_orig[1])]
+                rotated_image[linr, colr] = img[lin,col]
                 
     return rotated_image
 
-
-######################################################################
 def my_transformation(img, matriz):
-    height, width = img.shape[:2]
-    new_img = np.zeros((height,width,3), np.uint8)
+    h, w = img.shape[:2]
     
-    for linr in range(height):
-        for colr in range(width):
-            pos_rot = np.matrix([linr, colr, 1]).T
-            pos_orig = np.matmul(matriz, pos_rot)
-            
-            x = (matriz[0,0] * pos_rot[0] + matriz[0,1] * pos_rot[1]  + matriz[0,2] * pos_rot[2] ) / (matriz[2,0] * pos_rot[0] + matriz[2,1] * pos_rot[1]  + matriz[2,2] * pos_rot[2] )
-            y = (matriz[1,0] * pos_rot[0] + matriz[1,1] * pos_rot[1]  + matriz[1,2] * pos_rot[2] ) / (matriz[2,0] * pos_rot[0] + matriz[2,1] * pos_rot[1]  + matriz[2,2] * pos_rot[2] )
-            pos_rot[0] = x
-            pos_rot[1] = y
-            lin = round(pos_orig[0,0]); col = round(pos_orig[1,0]);
-            
-            if (lin >= 0 and lin < height) and (col >= 0 and col < width):
-                new_img[linr, colr] = img[int(pos_orig[0]), int(pos_orig[1])]
+    transformed_img = np.zeros((h,w,3), np.uint8)
     
-    return new_img
+    for lin in range(h):
+        for col in range(w):
+            coord = np.array([lin,col,1])
+            new_coord = np.array([0,0])
+            div = matriz[2,0] * coord[0] + matriz[2,1] * coord[1] + matriz[2,2]
 
-######################################################################
+            new_coord[0] = (matriz[0,0] * coord[0] + matriz[0,1] * coord[1] + matriz[0,2] ) / div
+            new_coord[1] = (matriz[1,0] * coord[0] + matriz[1,1] * coord[1] + matriz[1,2] )/div
+            
+            if (new_coord[0] >= 0 and new_coord[0] < h) and (new_coord[1] >= 0 and new_coord[1] < w):
+                transformed_img[new_coord[0], new_coord[1]] = img[lin,col]
+    
+    return transformed_img
 
-def get_tranformation(fonte, destino):
-    M_1 = np.zeros((3,3))
-    B = np.zeros((4,3))
+def get_H(inp, out):
+    A = np.zeros([8,8])
+    z = [0,0,0]
+    u= np.zeros((8,1))
     for i in range(4):
-        for k in range(3):
-            M_1[i,k] = fonte[i,k]
-            B[i,k] = destino[i][k]
-            
+        line = list(inp[i]) + [1] + z + [- inp[i][0] * out[i][0], -inp[i][1] * out[i][0]]
+        line_2 = z + list(inp[i]) + [1]  + [-inp[i][0] * out[i][1],-inp[i][1] * out[i][1]]
+        u[i] = out[i][0]
+        u[i+4] = out[i][1]
+        A[i,:] = line
+        A[i + 4,:] = line_2
     
-fonte = [(1,2)]
+    m = np.linalg.lstsq(A,u,rcond=None)
+    m = np.append(m[0],1)
     
-get_tranformation([(1,2)], [(1,2)])
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    return np.around(m.reshape([3,3]))
