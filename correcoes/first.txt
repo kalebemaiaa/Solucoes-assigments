@@ -1,143 +1,52 @@
-assigment-01-cacau
-
-	mario-1
-	
-		estilo/formatacao 0-2 
-			-> 2
-
-		compilou/rodou/saida 0-4 
-			-> 4
-
-		especificacao 0-4 ->
-			-> 4		
-
-	mario-2
-
-		estilo/formatacao 0-2 
-			-> 2
-
-		compilou/rodou 0-4 
-			-> 2 (uma mensagem de erro era diferente da esperada)
-
-		especificacao 0-4 ->
-			-> 4	
-
-	cash
-	
-		estilo/formatacao 0-2 
-			-> 2
-
-		compilou/rodou 0-4 
-			-> 4
-		
-
-		especificacao 0-4 ->
-			-> 1 (apesar de atender os requisitos e ser um programa funcional, não utilizou as funções como era esperado)
-
-	credit
-	
-		estilo/formatacao 0-2 
-			-> 1.5 (fugia do padrão algumas vezes)
-
-		compilou/rodou 0-4 
-			-> 0 (código chamando variáveis fora de escopo, funções vazias)
-		
-	
-		especificacao 0-4 ->
-			-> 0 (não atendia em nada o uqe foi pedido)
-
-assigment-01-melancia
-
-	mario-1
-	
-		estilo/formatacao 0-2 
-			-> 2
-
-		compilou/rodou 0-4 
-			-> 4
-
-		especificacao 0-4 ->
-			-> 4
-
-	mario-2
-
-		estilo/formatacao 0-2 
-			-> 2
-
-		compilou/rodou 0-4 
-			-> 4
-
-		especificacao 0-4 ->
-			-> 4
-
-	cash
-	
-		estilo/formatacao 0-2 
-			-> 2 
-
-		compilou/rodou 0-4 
-			-> 4
-		
-
-		especificacao 0-4 ->
-			-> 3.7 (achei desnecessário utilizar alguns parênteses nas funções)
-
-	credit
-	
-		estilo/formatacao 0-2 
-			-> 1.5 (fugia do estilo adotado levemente)
-
-		compilou/rodou 0-4 
-			-> 4
-		
-	
-		especificacao 0-4 ->
-			-> 3.5 (desnecessário o else na função checksum, era so 'return false', assim como na função header, podia ser somente 'return 4')
-
-assigment-01-abacate
-
-	mario-1
-	
-		estilo/formatacao 0-2 
-			-> 1.5 (em alguns blocos de código ele quebrava a linha e em outro não)
-
-		compilou/rodou/saida 0-4 
-			-> 4
-
-		especificacao 0-4 ->
-			-> 3.5 (as varáveis podiam ter sido declaradas dentro do loop, para evitar futuros conflitos)		
-
-	mario-2
-
-		estilo/formatacao 0-2 
-			-> 1.7 (erro de indentação l_6)
-
-		compilou/rodou 0-4 
-			-> 4
-
-		especificacao 0-4 ->
-			-> 3.5 (as varáveis podiam ter sido declaradas dentro do loop, para evitar futuros conflitos)
-
-	cash 
-	
-		estilo/formatacao 0-2 
-			-> 2 
-
-		compilou/rodou 0-4 
-			-> 4
-		
-
-		especificacao 0-4 ->
-			-> 3.7 (achei desnecessário utilizar alguns parênteses nas funções)
-
-	credit
-	
-		estilo/formatacao 0-2 
-			-> 2
-
-		compilou/rodou 0-4 
-			-> 4
-		
-	
-		especificacao 0-4 ->
-			-> 30 (parenteses l_29,l_42,l_65,l_77 desnecessário) (desnecessário criar t2 l_34 e t3 l_47) (podia declarar c dentro do for l_51 para tomar cuidado com escopo) (em l_103 nao precisa do else)
+name: assignment-01
+tasks:
+  - mario-1
+  - mario-2
+  - cash
+  - credit
+criterios:
+  - peso: 0.1
+    comentario: compilou, o codigo C é valido
+  - peso: 0.4
+    comentario: formatacao, apresentação dos codigos
+  - peso: 0.4
+    comentario: especificação, passou nos testes e faz o pedido
+---
+group_name: "cacau"
+members:
+  - Ycaro Gabriell Borges
+  - Beatriz Lúcia Teixeira de Souza
+tarefas:
+  mario-less: [10, 10, 10]
+  mario-more: [10, 7, 10]
+  cash: [10, 8, 0]
+  credit: [8, 0, 0]
+comment: |
+  No programa mario-2.c a saida de erro era diferente da esperada. Em cash.c fugiu totalmente do padrão
+  e deixou de atender ao que foi solicitado, como os retornos das funções.
+  O programa credit não compilou.
+---
+group_name: "melancia"
+members:
+  - Gabriel Pavanato
+  - Jeann da Rocha Silva
+tarefas:
+  mario-less: [10, 10, 10]
+  mario-more: [10, 10, 10]
+  cash: [10, 10, 8]
+  credit: [8, 10, 8]
+comment: |
+  Desnecessário o uso de parenteses e alguns elses em alguns retornos de funções.
+  
+---
+group_name: "abacate"
+members:
+  - Saulo Pires Vieira
+  - Edgard Junio Da Silva Viana
+tarefas:
+  mario-less: [8, 10, 8]
+  mario-more: [8, 10, 8]
+  cash: [10, 10, 7]
+  credit: [10, 10, 6]
+comment: |
+  Desenecessário o uso de alguns parenteses em retornos de funcoes, alem disso, a declaracao de algumas variaveis poderia ser feita dentro do loop, para evitar erros de escopo. Outro fato é que há a criação de varáveis desnecessárias, como t_2,t_3 e t_4.
