@@ -1,0 +1,13 @@
+﻿group_name: "acerola"
+members:
+  - Eduardo Nunes Alves
+  - Yure Santos de Oliveira
+tarefas:
+  cash: [3,1,1,5]
+  credit: [3,1,1,5]
+  mario-1: [1,1,1,5]
+  mario-2: [3,1,1,5]
+  population: [2,1,1,5]
+comment: |
+  Comentario pouco informativo 'have faith, Rademaker' e 'faith'.
+  Fica confuso tirar as chaves dos loops for em mario-1.
