@@ -1,127 +1,65 @@
-function [x, norm_dif, iteracao, norm_residuo] = metodo_gauss_inv(A,b,x0,E,M, type_norma)
-    U = triu(A,1)
-    L = tril(A,-1)
-    D = A - U - L  
-    
-    inv_LD = inv (L+D)
-    matriz_metodo = -inv_LD * U
-    c_metodo = inv_LD * b
-    
-    iteracao = 1
-    while (iteracao <= M)
-        x = matriz_metodo * x0 +  c_metodo
-        
-        norm_dif = norm(x - x0, type_norma)
-        
-        //criterio de parada = norm dif baixa
-        if (norm_dif < E)
-            break;
+function [M] = matriz_simetrica(n)
+    M = zeros((n,n))
+    i = 1
+    while i <= n
+        linha = rand((1,n + 1 - i))
+        M(i,i:n) = linha
+        i = i + 1
+    end
+    M = int(100 * (M + M'))
+endfunction
+/*
+function [lambda,x1,k,n_erro] = Metodo_potencia_v1(A,x0,epsilon,M) 
+k = 0
+x0 = x0 / 1//coordenada de maior módulo de x0
+x1 = A * x0 
+n_erro = epsilon  + 1
+while k <= M or n_erro >= epsilon
+    lambda = 1//coordernada de maior módulo de x1
+    x1 = x1 / lambda
+    n_erro = norm(x1 - x0, %inf)
+    x0 = x1
+    x1 = A * x0
+    k = k + 1
+end
+
+end
+
+function [lambda,x1,k,n_erro] = Metodo_potencia_v2(A,x0,epsilon,M) 
+k = 0
+x0 = x0 / norm(x0, 2)
+x1 = A * x0 
+n_erro = epsilon  + 1
+while k <= M and n_erro >= epsilon
+    lambda = x1 * x0
+    if lambda < 0
+        x1 = -x1
         end
-       
-        x0 = x
-        iteracao = iteracao + 1;
-    end
-    
-    //calcular norma residuo
-    norm_residuo = norm(b - A * x, type_norma)
-endfunction
+    x1 = x1 / norm(x1, 2)
+    n_erro = norm(x1 - x0, 2)
+    x0 = x1 
+    x1 = A * x0
+    k = k + 1
+end
 
-function [x] = resolve_tril(A,b)
-    n = size(A)(1)
-    x = zeros(n,1)
-    x(1,1) = b(1,1)/A(1,1)
-    for i = 2:n
-        x(i,1) = (b(i,1) - A(i,:) * x) / A(i,i)
-    end
-endfunction
+end
 
+function [lambda1,x1,k,n_erro] = Potencia_deslocada_inversa (A,x0,epsilon,alfa,M)
+k=0
+x0 = x0 / norm(x0, 2)
+n_erro = epsilon + 1
+while k<=M and n_erro >= epsilon
 
-function [x, norm_dif, iteracao, norm_residuo] = metodo_gauss_tril(A,b,x0,E,M, type_norma)
-    U = triu(A,1)
-    L = tril(A,-1)
-    D = A - U - L 
-    
-    M_metodo = (L+D)
-    iteracao = 1
-    while (iteracao <= M)
-        c = b - U * x0
-        x = resolve_tril(M_metodo, c)
-        
-        norm_dif = norm(x - x0, type_norma)
-        
-        //criterio de parada = norm dif baixa
-        if (norm_dif < E)
-            break;
-        end
-       
-        iteracao = iteracao + 1;
-        x0 = x
-    end
-    
-    //calcular norma residuo
-    norm_residuo = norm(b - A * x, type_norma)
-endfunction
-
-function [x, norm_dif, iteracao, norm_residuo] = metodo_jacobi(A,b,x0,E,M, type_norma)
-    U = -triu(A,1)
-    L = -tril(A,-1)
-    D = A - U - L
-    n = size(A)(1)    
-    identidade = eye(A)
-    
-    //invertendo D
-    for i = 1:n
-        D(i,:) = identidade(i,:)/D(i,i)
-    end
-    
-    matriz_metodo = D * (L + U)
-    c_metodo = D * b
-    
-    x = zeros(n,1)
- 
-    iteracao = 1;
-    //criterio de parada = exceder numero maximo
-    while (iteracao <= M)
-        x = matriz_metodo * x0 + c_metodo
-        
-        norm_dif = norm(x - x0, type_norma)
-        if(norm_dif < E) then
-            break
-        end
-        
-        x0 = x
-        iteracao = iteracao + 1
-    end
-    
-    //calcular norma residuo
-    norm_residuo = norm(b - A * x, type_norma)
-   
-endfunction
-
-function [M] = matriz_dominante(n)
-    M = rand(n,n)
-    for i = 1:n
-        M(i,i) = rand() + sum(M(i,:)) + 1
-    end
-endfunction
-
-function [retorno] = get_time_diff(matriz_numeros) 
-    N = matriz_numeros
-    kl = size(N)(2)
-
-    retorno = zeros(kl, 4)
-    for i = 1:kl
-        n = N(i)
-        b = rand(n,1)   
-        M = matriz_dominante(n)     
-        x0 = zeros(n,1)
-        tic();
-        [x, ndif, ite_inv, nres] = metodo_gauss_inv(M, b, x0, 10^-(8), 100, 2)
-        time_inv = toc();
-        tic();
-        [x, ndif, ite_tril, nres] = metodo_gauss_tril(M, b, x0, 10^-(8), 100, 2)
-        time_tril = toc();
-        retorno(i, :) = [ite_inv, time_inv, ite_tril, time_tril]
-    end
-    disp("Iterações inversa|| Tempo inversa|| Iterações tril|| Tempo tril")
-endfunction
+    (A – alfa*I)*x1 = x0
+    x1 = x1 /(norma_2 de x1)
+    lambda = x1T
+    *A*x1 (Quociente de Rayleigh; x1 é unitário)
+    Se x1T
+        *x0 < 0 então x1 = − x1 (Mantém x1 com mesmo sentido de x0)
+    n_erro = norma_2 de x1 – x0
+    x0 = x1
+    k=k+1
+end
+lambda1 = ...
+end
+*/
