@@ -50,6 +50,9 @@ bool isValid(string str)
 
         i++;
     }
+    
+    if(i <= 1 || i > 8)
+        return false;
 
     return true;
 }
@@ -58,7 +61,7 @@ void insert(Node *head, string palavra)
 {
     if (!isValid(palavra))
     {
-        cout << "Error: a palavra [" << palavra << "] inserida nao e valida." << endl;
+        cout << "Error: a palavra [" << palavra << "] nao e valida e nao foi inserida!" << endl;
         return;
     }
 
@@ -89,7 +92,7 @@ void printDoubleLinkedList(Node *head)
         cout << endl;
         return;
     }
-    cout << head->data << "\t";
+    cout << head->data << "  ";
 
     printDoubleLinkedList(head->next);
 }
@@ -251,6 +254,17 @@ Node *merge(Node *first, Node *second, bool (*compare)(string a, string b))
     }
 }
 
+// MINHA FUNCAO TO MERGE
+Node *merge(Node *h1, Node *h2, bool (*compare)(string a, string b)){
+    while(h1 && h2){
+        if(compare(h1, h2))
+    }
+    
+}
+
+
+
+
 // Function to do merge sort
 Node *mergeSort(Node *head, bool (*compare)(string a, string b))
 {
@@ -266,7 +280,7 @@ Node *mergeSort(Node *head, bool (*compare)(string a, string b))
     return merge(head, second, compare);
 }
 
-void delteMostFrequently(Node **head)
+void deleteMostFrequently(Node **head)
 {
     Node *tmp = *head;
 
@@ -320,48 +334,39 @@ void delteMostFrequently(Node **head)
 
 int main()
 {
-    Node *head = new Node;
-    char t[] = "AB";
-
-    head->prev = nullptr;
-    head->next = nullptr;
-    head->data = t;
+    Node *head = (Node *) malloc(sizeof(Node));
+    head -> prev = nullptr;
+    head -> next = nullptr;
     
-    insert(head, "ABA");
-    insert(head, "ABUJY");
-    insert(head, "TURA");
+    // ~Arquivo gerado com python para palavras aleatórias
+    FILE *inp = fopen("palavras_10.txt", "r");
     
-    // ~Lista inicial
-    //printDoubleLinkedList(head);
-
-    // ~Lista ordenada em ordem decrescente;
+    // ~Total de palavras a serem lidas
+    int nPalavras;
+    fscanf(inp, "%i", &nPalavras);
     
-    // ~Contabilizando tempo;
-    /*
-    auto timeStart = high_resolution_clock::now();
-    head = mergeSort(head, comparasionD);
-    auto timeStop = high_resolution_clock::now();
-    auto timeDuration = duration_cast<nanoseconds>(timeStop - timeStart);
-    printDoubleLinkedList(head);
-    cout << timeDuration.count() << endl;
-    */
+    // ~Carrega palavra na memória
+    char buffer[9];
+    fscanf(inp, "%s", buffer);
+    head -> data = buffer;
     
-    // ~Lista com a palavra que mais repete deletada;
-    //printDoubleLinkedList(head);
-    head = mergeSort(head, comparasionD);
-    printDoubleLinkedList(head);
-    delteMostFrequently(&head);
-    printDoubleLinkedList(head);
-    return 0;
-}
-    /*
-    FILE *inp = fopen("palavras_100.txt", "r");
-    int max;
-    fscanf(inp, "%i", &max);
-    for(int i = 0; i < max; i++) {
-        char buffer[9];
+    // ~Lendo palavras
+    for(int i = 0; i < nPalavras - 1; i++) {
         fscanf(inp, "%s", buffer);
         insert(head, buffer);
     }
-    fclose(inp)
-    */
+    fclose(inp);
+    
+    // ~Inserindo palavra invalida
+    insert(head, "DESGOSTO");
+    insert(head, "A");
+    insert(head, "BABABABABABABA");
+    
+    // ~Procurando palavra
+    cout << endl;
+    cout << "Palavra 'BABA' em: " << findNode(head, "BABA") << endl;
+    cout << "Palavra 'A' em: " << findNode(head, "A") << endl;
+    
+    // ~Printando lista
+    printDoubleLinkedList(head);
+}
