@@ -29,27 +29,14 @@ def palavraAleatoria(n):
         print(p)
         
         
-def geraArquivo():
-    palavras100 = palavraAleatoria(100)
-    palavras1000 = palavraAleatoria(1000)
-    palavras10000 = palavraAleatoria(10000)
-    with open("palavras_100.txt", "w") as f:
-        f.write("100\n")
-        for x in palavras100:
+def geraArquivo(n):
+    palavras = palavraAleatoria(n)
+    
+    with open(f"palavras_{n}.txt", "w") as f:
+        f.write(f"{n}\n")
+        for x in palavras:
             f.write(x)
             f.write("\n")
             
-    with open("palavras_1000.txt", "w") as f:
-         f.write("100\n")
-         for x in palavras1000:
-             f.write(x)
-             f.write("\n")
-     
-    with open("palavras_10000.txt", "w") as f:
-         f.write("100\n")
-         for x in palavras10000:
-             f.write(x)
-             f.write("\n")
-            
 
-geraArquivo()            
+geraArquivo(10)            
