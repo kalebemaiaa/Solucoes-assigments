@@ -14,12 +14,12 @@ int transformLetter(char letter) {
     string consoantes = "BJRST";
     
     for(int i = 0; i < 3; i++) {
-        if(toupper(letter) == vogais[i] ) 
+        if(letter == vogais[i] ) 
             return 1;
     }
     
     for(int i = 0; i < 5; i++) {
-        if(toupper(letter) == consoantes[i] ) 
+        if(letter == consoantes[i] ) 
             return 0;
     }
     
@@ -27,18 +27,20 @@ int transformLetter(char letter) {
 }
 
 bool isValid(string str) {
-    int primeiraLetra =transformLetter(str[0]);
+    int primeiraLetra = transformLetter(str[0]);
     if(primeiraLetra == -1)
         return false;
     
-    int i = 0;
-    for(; str[i] != '\0'; i++) {
-        int verificaAtual = transformLetter(str[i]);
-        
+    int i = 0, verificaAtual;
+    
+    while(str[i] != '\0'){
+        verificaAtual = transformLetter(str[i]);
         if(i % 2 == 0 && verificaAtual != primeiraLetra)
             return false;
         else if(i % 2 == 1 && verificaAtual == primeiraLetra)
             return false;
+        
+        i++;
     }
     
     return true;
@@ -46,7 +48,7 @@ bool isValid(string str) {
 
 void insert(Node *head, string palavra) {
     if(!isValid(palavra)) {
-        cout << "Error: a palavra inserida nao e valida. " << endl;
+        cout << "Error: a palavra [" << palavra << "] inserida nao e valida." << endl;
         return;
     }
     
@@ -58,17 +60,12 @@ void insert(Node *head, string palavra) {
     newNode -> next = nullptr;
     newNode -> data = palavra;
     head -> next = newNode;
-    return ;
 }
 
 Node *findNode(Node *head, string palavra) {
-    while(head != nullptr) {
-        if(palavra.compare(head -> data) == 0)
-            return head;
-        head = head -> next;
-    }
-    
-    return nullptr;
+    if(head == nullptr) return nullptr;
+    if(head -> data == palavra) return head;
+    return findNode(head -> next, palavra);
 }
 
 void printDoubleLinkedList(Node *head){
@@ -85,6 +82,11 @@ void printDoubleLinkedList(Node *head){
 void deleta(Node **head, string palavra) {
     Node *tmp = findNode(*head, palavra);
     
+    if(tmp == nullptr) {
+        cout << "A palavra [" << palavra << "] nao foi encontrada na lista e nao foi possivel deletar ela.\n";
+        return;
+    }
+    
     if(tmp == *head){
         *head =  tmp -> next;
         (*head) -> prev = nullptr;
@@ -92,17 +94,18 @@ void deleta(Node **head, string palavra) {
     }
     
     tmp -> prev -> next = tmp -> next;
-    tmp -> next -> prev = tmp -> prev;
+    if(tmp -> next)
+        tmp -> next -> prev = tmp -> prev;
     free(tmp);
 }
 
-static int convert(string palavra) {
+int convert(string palavra) {
     int n = 0;
     string base = "AUYBJSRT";
     
     for (int i = 0; palavra[i] != '\0'; i++) {
         for(int j = 0; base[j] != '\0'; j++) {
-            if(toupper(palavra[i]) == base[j])
+            if(palavra[i] == base[j])
                 n += (1 + j) * (pow(10, (7 - i)));
         }
     }
@@ -111,7 +114,7 @@ static int convert(string palavra) {
 }
 
 bool comparasion(string s1, string s2) {
-    if( convert(s1) < convert(s2)) 
+    if(convert(s1) < convert(s2)) 
         return true;
     return false;
 }
@@ -146,7 +149,6 @@ void swap(Node **head, Node *h1, Node *h2) {
         h1 -> prev -> next = h1;
     else{
         *head = h1;
-        cout << "ou" << endl;
     }
     if(h2 -> next != nullptr)        
         h2 -> next -> prev = h2;
@@ -232,30 +234,81 @@ Node *mergeSort(Node *head)
     return merge(head,second);
 }
 
+void delteMostFrequently(Node **head){
+    Node *tmp = *head;
+    
+    string mostFrequently = tmp -> data;
+    int maxCount = 1;
+    
+    // ~Computa o numero de vezes que a primeira palavra aparece;
+    while(tmp -> data == tmp -> next -> data) {
+        maxCount ++;
+        tmp = tmp -> next;
+    }
+    
+    // ~Enquanto nao chegar no fim da lista
+    while(tmp -> next != nullptr){
+        // ~Enquanto for a mesma palavra, incrementar searcher;
+        int searcherCount = 1;
+        while(tmp -> data == tmp -> next -> data) {
+            searcherCount++;
+            tmp = tmp -> next;
+        }
+        
+        // ~Se a nova palavra aparece mais, susbstituir;
+        if(searcherCount > maxCount){
+            maxCount = searcherCount;
+            mostFrequently = tmp -> data;
+        }
+        
+        // ~Chegou no final da lista pelo loop de dentro
+        if(tmp -> next == nullptr) break;
+        tmp = tmp -> next;
+    }
+    
+    // ~Deletando a que mais se repete;
+    while(maxCount > 0) {
+        deleta(head, mostFrequently);
+        maxCount --;
+    }
+}
+
 
 int main()
 {
     Node *head = (Node *) malloc(sizeof(Node));
-    string t = "Ab";
+    string t = "AB";
     
     head -> prev = nullptr;
     head -> next = nullptr;
     head -> data = t;
     
-    insert(head, "aba");
+    insert(head, "ABA");
     insert(head, "ABUJY");
-    insert(head, "Tura");
-    insert(head, "suraTury");
-    insert(head, "suraTura");
+    insert(head, "TURA");
+    insert(head, "SURATURY");
+    insert(head, "SURATURA");
+    insert(head, "SURATURY");
+    insert(head, "ABUJY");
+    insert(head, "ABA");
+    insert(head, "ABUJY");
+    insert(head, "ABUJY");
+    insert(head, "TURA");
+    insert(head, "TURA");
+    insert(head, "TURA");
+    insert(head, "TURA");
+    insert(head, "TURA");
+    insert(head, "TURA");
     
-    sortBubble(&head);
-    
-    
-    
+    // ~Lista inicial
     printDoubleLinkedList(head);
     
+    // ~Lista ordenada em ordem decrescente;
     head = mergeSort(head);
+    printDoubleLinkedList(head);
     
+    // ~Lista com a palavra que mais repete deletada;
+    delteMostFrequently(&head);
     printDoubleLinkedList(head);
     
     return 0;
