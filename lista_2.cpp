@@ -1,8 +1,9 @@
 #include <iostream>
 #include <cmath>
-#include <cstdlib>
+#include <chrono> 
 
 using namespace std;
+using namespace std::chrono;
 
 struct Node
 {
@@ -97,7 +98,7 @@ void deleta(Node **head, string palavra)
 {
     Node *tmp = findNode(*head, palavra);
 
-    if (tmp == nullptr)
+    if (!tmp)
     {
         cout << "A palavra [" << palavra << "] nao foi encontrada na lista e nao foi possivel deletar ela.\n";
         return;
@@ -133,7 +134,14 @@ int convert(string palavra)
     return n;
 }
 
-bool comparasion(string s1, string s2)
+bool comparasionC(string s1, string s2)
+{
+    if (convert(s2) < convert(s1))
+        return true;
+    return false;
+}
+
+bool comparasionD(string s1, string s2)
 {
     if (convert(s1) < convert(s2))
         return true;
@@ -181,33 +189,25 @@ void swap(Node **head, Node *h1, Node *h2)
         h1->next->prev = h1;
 }
 
-void sortBubble(Node **head)
-{
+void sortBubble(Node **head, bool (*compare)(string a, string b)) {
     Node *cur;
     Node *nextCur;
     bool swapped = true;
-
-    int count_vezes = 0;
-    while (swapped)
-    {
-
-        cout << ++count_vezes << endl;
+    
+    while(swapped) {
         swapped = false;
         cur = *head;
-        nextCur = (*head)->next;
-
-        while (nextCur != nullptr)
-        {
-            if (!comparasion(cur->data, nextCur->data))
-            {
+        nextCur = cur -> next;
+        
+        while(nextCur != nullptr) {
+            if(compare( nextCur -> data, cur -> data)){
                 swap(head, cur, nextCur);
                 swapped = true;
             }
-            else
-            {
+            else{
                 cur = nextCur;
             }
-            nextCur = cur->next;
+            nextCur = cur -> next;
         }
     }
 }
@@ -225,7 +225,7 @@ Node *split(Node *head)
     return temp;
 }
 
-Node *merge(Node *first, Node *second)
+Node *merge(Node *first, Node *second, bool (*compare)(string a, string b))
 {
     // If first linked list is empty
     if (first == nullptr)
@@ -235,17 +235,16 @@ Node *merge(Node *first, Node *second)
     if (second == nullptr)
         return first;
 
-    // Pick the smaller value
-    if (!comparasion(first->data, second->data))
+    if (compare(first->data, second->data))
     {
-        first->next = merge(first->next, second);
+        first->next = merge(first->next, second, compare);
         first->next->prev = first;
         first->prev = NULL;
         return first;
     }
     else
     {
-        second->next = merge(first, second->next);
+        second->next = merge(first, second->next, compare);
         second->next->prev = second;
         second->prev = NULL;
         return second;
@@ -253,25 +252,25 @@ Node *merge(Node *first, Node *second)
 }
 
 // Function to do merge sort
-Node *mergeSort(Node *head)
+Node *mergeSort(Node *head, bool (*compare)(string a, string b))
 {
     if (head == nullptr || head->next == nullptr)
         return head;
     Node *second = split(head);
 
     // Recur for left and right halves
-    head = mergeSort(head);
-    second = mergeSort(second);
+    head = mergeSort(head, compare);
+    second = mergeSort(second, compare);
 
     // Merge the two sorted halves
-    return merge(head, second);
+    return merge(head, second, compare);
 }
 
 void delteMostFrequently(Node **head)
 {
     Node *tmp = *head;
 
-    string mostFrequently = tmp->data;
+    string mostFrequently = tmp -> data;
     int maxCount = 1;
 
     // ~Computa o numero de vezes que a primeira palavra aparece;
@@ -280,28 +279,32 @@ void delteMostFrequently(Node **head)
         maxCount++;
         tmp = tmp->next;
     }
-
+    
+    tmp = tmp -> next;
     // ~Enquanto nao chegar no fim da lista
     while (tmp->next != nullptr)
-    {
+    {   
         // ~Enquanto for a mesma palavra, incrementar searcher;
         int searcherCount = 1;
+        
         while (tmp->data == tmp->next->data)
         {
             searcherCount++;
             tmp = tmp->next;
+            
+            // ~Chegou no final da lista pelo loop de dentro
+            if(tmp -> next == nullptr) break;
         }
-
+        
         // ~Se a nova palavra aparece mais, susbstituir;
         if (searcherCount > maxCount)
         {
             maxCount = searcherCount;
             mostFrequently = tmp->data;
         }
-
+        
         // ~Chegou no final da lista pelo loop de dentro
-        if (tmp->next == nullptr)
-            break;
+        if(tmp -> next == nullptr) break;
         tmp = tmp->next;
     }
 
@@ -323,35 +326,35 @@ int main()
     head->prev = nullptr;
     head->next = nullptr;
     head->data = t;
-    /*
-    // insert(head, "ABA");
-    // insert(head, "ABUJY");
-    // insert(head, "TURA");
-    // insert(head, "SURATURY");
-    // insert(head, "SURATURA");
-    // insert(head, "SURATURY");
-    // insert(head, "ABUJY");
-    // insert(head, "ABA");
-    // insert(head, "ABUJY");
-    // insert(head, "ABUJY");
-    // insert(head, "TURA");
-    // insert(head, "TURA");
-    // insert(head, "TURA");
-    // insert(head, "TURA");
-    // insert(head, "TURA");
-    // insert(head, "TURA");
-    */
+    
+    insert(head, "ABA");
+    insert(head, "ABUJY");
+    insert(head, "TURA");
+    
     // ~Lista inicial
     //printDoubleLinkedList(head);
 
     // ~Lista ordenada em ordem decrescente;
-    //head = mergeSort(head);
-    //printDoubleLinkedList(head);
-
+    
+    // ~Contabilizando tempo;
+    /*
+    auto timeStart = high_resolution_clock::now();
+    head = mergeSort(head, comparasionD);
+    auto timeStop = high_resolution_clock::now();
+    auto timeDuration = duration_cast<nanoseconds>(timeStop - timeStart);
+    printDoubleLinkedList(head);
+    cout << timeDuration.count() << endl;
+    */
+    
     // ~Lista com a palavra que mais repete deletada;
-    //delteMostFrequently(&head);
     //printDoubleLinkedList(head);
-
+    head = mergeSort(head, comparasionD);
+    printDoubleLinkedList(head);
+    delteMostFrequently(&head);
+    printDoubleLinkedList(head);
+    return 0;
+}
+    /*
     FILE *inp = fopen("palavras_100.txt", "r");
     int max;
     fscanf(inp, "%i", &max);
@@ -360,11 +363,5 @@ int main()
         fscanf(inp, "%s", buffer);
         insert(head, buffer);
     }
-
-    cout << "comecando sort" << endl;
-    sortBubble(&head);
-    cout << "fim do sort!" << endl;
-    printDoubleLinkedList(head);
-    fclose(inp);
-    return 0;
-}
+    fclose(inp)
+    */
