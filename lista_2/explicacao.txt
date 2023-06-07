@@ -1,0 +1,6 @@
+Explicação:
+
+1- As funções desenvolvidas estão em "auxiliar_functions.cpp"
+2- Todos códigos foram desenvolvidos pelo compilador online: "https://www.onlinegdb.com/online_c++_compiler"
+3- Para o problema 4, usei um script python para gerar palavras (válidas) aleatórias e escrever um arquivo com essas 'n' palavras, onde a primeira linha indica o numero de palavras e há uma palavra por linha.
+4- Para abrir o arquivo passado é pressuposto que o formato esteja correto. O arquivo basic serve apenas para demonstrar funções (palavras não aleatórias).
