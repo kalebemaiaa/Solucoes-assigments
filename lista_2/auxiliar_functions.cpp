@@ -39,13 +39,14 @@ bool isValid(string str)
 
     while (str[i] != '\0')
     {
-        verificaAtual = transformLetter(str[i]);
+        verificaAtual = transformLetter(str[i++]);
         if (i % 2 == 0 && verificaAtual != primeiraLetra)
             return false;
+  
         else if (i % 2 == 1 && verificaAtual == primeiraLetra)
             return false;
 
-        i++;
+
     }
     
     // ~Tem menos de 2 letras ou mais de 8.
@@ -240,34 +241,31 @@ Node *split(Node *head)
         slow = slow->next;
     }
     struct Node *temp = slow->next;
-    slow->next = NULL;
+    slow->next = nullptr;
+    temp -> prev = nullptr;
     return temp;
 }
 
-void insert(Node *h1, Node *h2) {
-    if(h1 -> next == h2 || h1 == nullptr || h2 == nullptr) return;
-    Node *tmp = h1 -> next;
-    h1 -> next = h2;
-    h2 -> prev = h1;
-    h2 -> next = tmp;
-    if(h2 -> next)
-        h2 -> next -> prev = h2;
-}
 
-Node *myMerge(Node *h1, Node *h2, bool (*compare)(string a, string b)) {
-    Node *curH1 = h1, *curH2 = h2;
-    Node *tmp = (compare(h1 -> data, h2 -> data)) ? h1 : h2;
-    /*
-    while(h1 && h2) {
-        if(compare(h1 -> data, h2 -> data)){
-            h2 = h2 -> next;
-            insert(curH1, curH2);
-            h1 = h1 -> next;
-        }
-    }
-    */
-    return tmp;
-}
+  
+   
+    
+   
+    
+     
+
+
+
+ 
+ 
+       
+   
+    
+     
+   
+  
+
+
 
 Node *merge(Node *first, Node *second, bool (*compare)(string a, string b))
 {
@@ -295,7 +293,6 @@ Node *merge(Node *first, Node *second, bool (*compare)(string a, string b))
     }
 }
 
-// Function to do merge sort
 Node *mergeSort(Node *head, bool (*compare)(string a, string b))
 {
     if (head == nullptr || head->next == nullptr)
@@ -325,6 +322,7 @@ void deleteMostFrequently(Node **head)
     
     tmp = tmp -> next;
     // ~Procurar maxima frequencia
+    
     while (tmp->next != nullptr)
     {   
         searcherCount = 1;
