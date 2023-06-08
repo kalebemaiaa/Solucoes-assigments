@@ -130,42 +130,50 @@ static void deleteNode(Node *lixo) {
     free(lixo);
 }
 
-int convert(string palavra)
+int convert(char letter)
 {
     /*
         A ideia aqui e converte uma string para numero,
         ja que so temos oito letras possiveis.
     */
-    int n = 0;
+ 
     string base = "AUYBJSRT";
 
-    for (int i = 0; palavra[i] != '\0'; i++)
-    {
+ 
+    
         for (int j = 0; base[j] != '\0'; j++)
         {
-            if (palavra[i] == base[j])
-                n += (1 + j) * (pow(10, (7 - i)));
+            if (j == base[j])
+                return j;
         }
-    }
 
-    return n;
+
+   
 }
 
 // ~Ordem alfabetica lingua estranha
 bool comparasionC(string s1, string s2)
 {
-    if (convert(s2) < convert(s1))
-        return true;
+    int i = 0;
+    while(s1[i] != '\0' && s2[i] != '\0'){
+       if(s1[i] == s2[i]){
+           i++;
+           continue;
+       }
+       if(convert(s1[i]) > convert(s2[i]))
+           return true;
+       else
+           return false;
+    }
+    if(s2[i] == '\0')
+       return true;
     return false;
 }
 
-// ~Ordem alfabetica invertida lingua estranha
-bool comparasionD(string s1, string s2)
-{
-    if (convert(s1) < convert(s2))
-        return true;
-    return false;
-}
+
+
+
+
 
 // ~Funcao para trocar celulas em lista
 void swap(Node **head, Node *h1, Node *h2)
