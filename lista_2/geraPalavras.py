@@ -25,14 +25,11 @@ def palavraAleatoria(n):
     
     return r
         
-    for p in r:
-        print(p)
-        
         
 def geraArquivo(n):
     palavras = palavraAleatoria(n)
     
-    with open(f"palavras_{n}.txt", "w") as f:
+    with open(f"wr_{n}.txt", "w") as f:
         f.write(f"{n}\n")
         for x in palavras:
             f.write(x)
