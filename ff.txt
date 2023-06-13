@@ -1,0 +1,109 @@
+#include <iostream>
+
+using namespace std;
+
+struct Node{
+    int iData;
+    struct Node* next;
+};
+
+Node *createNode(int value){
+    Node *newNode = new Node;
+    newNode -> iData = value;
+    newNode -> next = nullptr; 
+    
+    return newNode;
+}
+
+void insert(Node * head, int value) {
+    Node *newNode = createNode(value);
+    newNode -> next = head -> next; 
+    head -> next = newNode;
+}
+
+void insertOrdem(Node *head, int value) {
+    Node *begin = head;
+    while(head -> next != begin){
+        if(head -> next -> iData < value){
+            head = head -> next;
+            continue;
+        }
+        // ~Vem antes do da frente
+        insert(head, value);
+        return; 
+    }
+    
+    // ~Maior que todos que estão na lista
+    insert(head, value);
+}
+
+void printListaN(Node *head){
+    while(head) {
+        cout << head -> iData << " ";
+        head = head -> next;
+    }
+    cout << endl;
+}
+
+void printListaC(Node *head){
+    Node *start = head;
+    while(head->next != start) {
+        cout << head-> iData << " ";
+        head = head -> next;
+    }
+    cout << head -> iData << " " << endl;
+}
+
+bool isCircular(Node *head) {
+    Node *start = head;
+    for(head = head -> next; head != nullptr; head = head -> next){
+        if(head == start)
+            return true;
+    }
+    return false;
+}
+
+Node *transformation(Node *head, int k) {
+    Node *begin = head;
+    while(head -> next != nullptr)
+        head = head -> next;
+        
+    // ~Transforma em lista circular;
+    head -> next = begin;
+    while(k > 0){
+        k--;
+        head = head -> next;
+    }
+    begin = head -> next;
+    head -> next = nullptr;
+    return begin;
+}
+
+int main()
+{
+    // Lista circular
+    Node *head = new Node;
+    head->iData = 1;
+    head -> next = head;
+    insertOrdem(head, 3);
+    insertOrdem(head, 5);
+    insertOrdem(head, 4);
+    insertOrdem(head, 100);
+    insertOrdem(head, 2);
+    printListaC(head);
+    
+    // Lista normal
+    Node *head2 = new Node;
+    head2 -> iData = 1;
+    head2 -> next = nullptr;
+    insert(head2, 5);
+    insert(head2, 4);
+    insert(head2, 3);
+    insert(head2, 2);
+    printListaN(head2);
+    head2 = transformation(head2, 2);
+    printListaN(head2);
+    //cout << isCircular(head) << endl;
+    //cout << isCircular(head2) << endl;
+    return 0;
+}
