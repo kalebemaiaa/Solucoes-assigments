@@ -1,0 +1,605 @@
+NF-vice-presidência 9
+	
+9: Paralelamente, entre 1995 e 1996, coordenou nacionalmente o movimento evangélico progressista em Belo Horizonte e ocupou a vice-presidência da Convenção Batista de Alagoas.  ['vice-presidência' NF] 
+	
+12: Deixou a presidência regional do PT em 1999, para ocupar a vice-presidência.  ['vice-presidência' NF] 
+	
+17: Em 2001 deixou a vice-presidência do PT de Alagoas.  ['vice-presidência' NF] 
+	
+12: Em 1990, assumiu a vice-presidência do BNDES, na gestão de Eduardo Modiano, no governo Fernando Collor de Melo (1990-1992).  ['vice-presidência' NF] 
+	
+18: Com o falecimento do ministro das Comunicações Sergio Motta em abril de 1998, e a ida de Mendonça de Barros para o ministério, continuou na vice-presidência do banco na gestão de André Lara Resende, durante a qual, no mês de julho, se concretizou, através de leilão, a privatização do Sistema Telebrás.  ['vice-presidência' NF] 
+	
+21: Para concorrer com os candidatos do governo, Paulo Maluf e Flávio Marcílio, os partidos de oposição - com exceção do Partido dos Trabalhadores (PT) -, liderados pelo PMDB, e a Frente Liberal - dissidência da agremiação governista, o Partido Democrático Social (PDS) -, reunidos na Aliança Democrática, lançaram Tancredo Neves (então governador de Minas Gerais) e o senador maranhense José Sarney como candidatos à presidência e à vice-presidência da República.  ['vice-presidência' NF] 
+	
+12: Exerceu a vice-presidência da Comissão de Turismo e Desporto e foi membro da Comissão de Meio Ambiente e Desenvolvimento Sustentável.  ['vice-presidência' NF] 
+	
+12: Exerceu a vice-presidência da Comissão de Turismo e Desporto e foi membro da Comissão de Meio Ambiente e Desenvolvimento Sustentável.  ['vice-presidência' NF] 
+	
+6: Ocupou então a vice-presidência do Diretório Municipal do PT em Basiléia, entre 2001 e 2002.  ['vice-presidência' NF] 
+
+
+DI-então 8
+	
+14: Nas eleições de outubro de 1996, com o apoio de Ronaldo Lessa, elegeu-se prefeita de Maceió na legenda do PSB, derrotando a então líder nas pesquisas de intenção de voto, Heloísa Helena, do Partido dos Trabalhadores (PT), e tornando-se a primeira mulher a assumir a prefeitura municipal.  ['prefeita' Lemma:prefeito≠prefeita]  ['então' Gender:Masc≠Fem § Cat:NOUN≠ADJ | Cat:ADV≠ADJ] 
+	
+15: Em julho de 1997 foi uma das líderes da campanha pelo «impeachment» do então governador Divaldo Suruagy, que terminou por renunciar ao mandato.  ['então' Cat:NOUN≠ADJ | Cat:ADV≠ADJ] 
+	
+4: Em 1991 saiu do BNB para assumir a presidência do Banco do Estado do Ceará S/A (BEC), permanecendo no cargo até 1994, ano em que atuou como secretário de Fazenda do Ceará, a convite do então governador Ciro Gomes (1991-1995).  ['então' Cat:NOUN≠ADJ | Cat:ADV≠ADJ] 
+	
+33: Com isso, o então ministro-chefe do SNI, general Otávio Aguiar de Medeiros, e o então chefe da Agência Central do órgão em Brasília, general Newton de Araújo Oliveira e Cruz, foram envolvidos no episódio como os possíveis mandantes do crime, que foi ainda associado ao processo de falência do conglomerado Capemi, do qual o jornalista também teria recebido socorro financeiro, que acabaria sendo insuficiente para o projeto de reedição da revista.  ['então' Cat:NOUN≠ADJ | Cat:ADV≠ADJ]  ['então' Cat:NOUN≠ADJ | Cat:ADV≠ADJ] 
+	
+44: Teria classificado as autuações como “ações políticas” do então secretário da Receita Federal, Francisco Dornelles, contra os políticos de oposição.  ['então' Cat:NOUN≠ADJ | Cat:ADV≠ADJ] 
+	
+3: Ingressou no serviço de inteligência em 1978, tendo servido na Agência São Paulo, do então Serviço Nacional de Informações (SNI), até 1987.  ['então' Cat:NOUN≠ADJ | Cat:ADV≠ADJ] 
+	
+6: Em junho de 1997 liderou a greve dos policiais militares de Minas Gerais por melhores salários e participou das negociações com representantes do então governador Eduardo Azeredo, do Partido da Social Democracia Brasileira (PSDB), que resultaram, entre outros benefícios, no aumento do piso salarial da categoria.  ['melhores' Lemma:melhor≠bom § Cat:NOUN≠ADJ | Lemma:melhor≠bom | Number:Sing≠Plur § Lemma:melhorar≠bom § Cat:VERB≠ADJ | Number:Sing≠Plur § Lemma:melhorar≠bom § Cat:VERB≠ADJ]  ['então' Cat:NOUN≠ADJ | Cat:ADV≠ADJ] 
+	
+63: Em outubro de 2009, o então presidente da República Luiz Inácio Lula da Silva, Sérgio Cabral e o prefeito da capital, Eduardo Paes, comemoraram a escolha definitiva do Rio de Janeiro como sede das Olimpíadas de 2016.  ['então' Cat:NOUN≠ADJ | Cat:ADV≠ADJ] 
+
+
+NF-vice-presidente 8
+	
+14: Pelo Programa Nacional de Privatização (PND), presidiu a Câmara de Liquidação e Custódia S.A. e foi vice-presidente do conselho da Companhia Petroquímica do Sul (Copesul), da Usinas Siderúrgicas de Minas Gerais S.A. (Usiminas) e da Rede Ferroviária Federal S.A.  ['vice-presidente' NF] 
+	
+17: Em novembro de 1995, no governo Fernando Henrique Cardoso (1995-2003), retornou mais uma vez ao BNDES como vice-presidente na gestão de Luís Carlos Mendonça de Barros, que tomou posse com o compromisso de levar adiante o processo de privatização das empresas estatais.  ['vez' Gender:Fem≠Masc]  ['vice-presidente' NF] 
+	
+29: Tornou-se sócio gerente da RJX Investimento Ltda., vice-presidente executivo do CEBRI e membro do conselho de administração da RB Capital.  ['vice-presidente' NF] 
+	
+8: Em abril de 2009, foi aclamado primeiro vice-presidente da Frente Parlamentar de Saúde da Câmara dos Deputados.  ['vice-presidente' NF] 
+	
+10: Empossado na nova legislatura em Fevereiro de 2011, manteve-se como vice-líder de seu partido na Câmara, e, como parte de suas atividades parlamentares, integrou como titular as Comissões de Legislação Participativa (CLP) e a de Desenvolvimento Urbano (CDU), da qual foi vice-presidente.  ['vice-líder' NF]  ['vice-presidente' NF] 
+	
+22: Integrou como titular e segundo vice-presidente a Comissão de Desenvolvimento Urbano, como suplente a Comissão de Ciência e Tecnologia.  ['vice-presidente' NF] 
+	
+23: Foi ainda terceiro vice-presidente da Comissão Parlamentar de Inquérito (CPI) do Sistema Carcerário, e presidente da Comissão Especial da Jornada Máxima de Trabalho.  ['terceiro' Cat:NOUN≠ADJ | Lemma:terceirar≠terceiro § Cat:VERB≠ADJ]  ['vice-presidente' NF] 
+	
+18: Durante as duas legislaturas como deputado federal foi terceiro vice-presidente da Comissão de Segurança Pública e Combate ao Crime Organizado, participou da Comissão Mista para Levantar as Causas e Efeitos da Violência e das comissões permanentes de Diretos Humanos e de Relações Exteriores e Defesa Nacional.  ['terceiro' Cat:NOUN≠ADJ | Lemma:terceirar≠terceiro § Cat:VERB≠ADJ]  ['vice-presidente' NF] 
+
+
+DI-partir 4
+	
+22: As duas demissões decorreram da divulgação de fitas gravadas a partir de escuta clandestina instalada na linha telefônica da presidência do BNDES.  ['partir' Cat:VERB≠NOUN | Cat:VERB≠NOUN | Cat:VERB≠NOUN | Cat:VERB≠NOUN | Cat:VERB≠NOUN] 
+	
+14: Além disso, entre as demandas assistidas pelo Ministério durante seu mandato, atuou pela Política Nacional de Desenvolvimento Regional (PNDR), criada com o intuito de reduzir as desigualdades entre as regiões brasileiras, a partir de ações que priorizavam o desenvolvimento sustentável do Nordeste, da Amazônia e do Centro Oeste.  ['partir' Cat:VERB≠NOUN | Cat:VERB≠NOUN | Cat:VERB≠NOUN | Cat:VERB≠NOUN | Cat:VERB≠NOUN] 
+	
+14: A partir de então, teria dois anos para fazer a arrecadação, avaliação e leilão público dos bens da empresa.  ['partir' Cat:VERB≠NOUN | Cat:VERB≠NOUN | Cat:VERB≠NOUN | Cat:VERB≠NOUN | Cat:VERB≠NOUN] 
+	
+5: Tomou posse em fevereiro de 2007 e tornou-se a vice-líder da bancada de seu partido na Câmara dos Deputados a partir de maio de 2008.  ['vice-líder' NF]  ['partir' Cat:VERB≠NOUN | Cat:VERB≠NOUN | Cat:VERB≠NOUN | Cat:VERB≠NOUN | Cat:VERB≠NOUN] 
+
+
+NF-ex-governador 4
+	
+18: Em 2002, candidatou-se a vice-governador na chapa liderada pelo ex-governador Antonio Brito, e que além do partido deste, o Partido Popular Socialista (PPS) e o PFL, incorporava ainda as legendas do Partido Social Liberal (PSL) e do Partido Trabalhista do Brasil (PTdoB).  ['vice-governador' NF]  ['ex-governador' NF] 
+	
+8: Em 1981, aproximou-se de Gilberto Mestrinho, ex-governador do estado (1959-1963) e novamente candidato ao Executivo estadual.  ['ex-governador' NF] 
+	
+62: Fotos da viagem foram divulgadas no blog do ex-governador e deputado federal Anthony Garotinho do Partido da República (PR).  ['ex-governador' NF] 
+	
+122: A despedida de Sérgio Cabral se deu em meio a protestos, enfrentando o ex-governador a mais baixa popularidade desde o início de sua gestão.  ['ex-governador' NF] 
+
+
+DI-falida 4
+	
+13: Quando isso ocorreu, em abril, De Carli, autor do pedido e grande credor da empresa, da qual teria que receber (em valores da época) cerca de 151 milhões de cruzeiros pela venda de uma destilaria de álcool, foi nomeado pelo juiz síndico de sua massa falida.  ['síndico' Cat:NOUN≠ADJ]  ['falida' Lemma:falido≠faler § Cat:ADJ≠VERB | Lemma:falir≠faler] 
+	
+29: Segundo o «Jornal do Brasil», Frota reuniu uma série de documentos que comprovavam que De Carli havia sido condenado por estelionato, processado inúmeras vezes por sonegação de impostos, criminalmente processado por desvio desses processos, acusado de incêndios suspeitos em Manaus e Recife, de desviar tratores quando era síndico da massa falida da Capemi e indiciado numa ação cível junto ao Banco do Brasil.  ['falida' Lemma:falido≠faler § Cat:ADJ≠VERB | Lemma:falir≠faler] 
+	
+36: Ainda em fevereiro, o procurador-geral da República, José Paulo Sepúlveda Pertence, determinou a instalação de inquérito policial para verificar o envolvimento do senador em desvio de bens da massa falida da Capemi, peculato e falsidade ideológica.  ['falida' Lemma:falido≠faler § Cat:ADJ≠VERB | Lemma:falir≠faler] 
+	
+37: Segundo a promotoria, De Carli, aproveitando-se de sua condição de síndico da massa falida da Capemi, transferira para si o controle acionário da Capemi Seguradora S.A. (Capesa), operação essa iniciada no dia 31 de dezembro de 1983.  ['falida' Lemma:falido≠faler § Cat:ADJ≠VERB | Lemma:falir≠faler] 
+
+
+NF-vice-líder 4
+	
+10: Assumindo o mandato em fevereiro de 2007, foi vice-líder do bloco parlamentar integrado pelo PDT, pelo Partido Socialista Brasileiro (PSB), pelo Partido Comunista do Brasil (PCdoB), pelo Partido da Mobilização Nacional (PMN), pelo Partido Humanista da Solidariedade (PHS) e pelo Partido Republicano Brasileiro (PRB).  ['vice-líder' NF] 
+	
+10: Assumindo o mandato em fevereiro de 2007, foi vice-líder do bloco parlamentar integrado pelo PDT, pelo Partido Socialista Brasileiro (PSB), pelo Partido Comunista do Brasil (PCdoB), pelo Partido da Mobilização Nacional (PMN), pelo Partido Humanista da Solidariedade (PHS) e pelo Partido Republicano Brasileiro (PRB).  ['vice-líder' NF] 
+	
+10: Tomou posse em fevereiro de 1999 e desse ano ao seguinte foi vice-líder do bloco parlamentar formado pelo PL e os partidos Social Trabalhista (PST) e Social Liberal (PSL).  ['vice-líder' NF] 
+	
+12: Entre 2000 e 2001 permaneceu como vice-líder do bloco formado pelo PL e pelo PSL.  ['vice-líder' NF] 
+
+
+NF-1º 3
+	
+1: «Valter Correia Brito Neto» nasceu em Campina Grande (PB) no dia 1º de setembro de 1982, filho de Valter Correia Brito Filho.  ['1º' NF] 
+	
+4: Contudo, com a renúncia do deputado federal Ronaldo Cunha Lima do Partido da Social Democracia Brasileira (PSDB), assumiu uma cadeira na Câmara em 1º de novembro de 2007.  ['Contudo' NF]  ['1º' NF] 
+	
+34: Concluindo seu mandato na Câmara dos Deputados em janeiro de 1987, em 1º de fevereiro seguinte De Carli assumiu sua cadeira no Senado, no qual se tornou membro titular da Comissão de Fiscalização, Finanças e Tomada de Contas.  ['Câmara' Lemma:câmara≠Câmara]  ['1º' NF] 
+
+
+DI-filha 3
+	
+1: «Kátia Born Ribeiro» nasceu em Maceió no dia 1° de janeiro de 1953, filha de José Ribeiro Lins e de Sônia Born Ribeiro.  ['filha' Lemma:filho≠filha | Lemma:filho≠filha § Cat:ADJ≠NOUN | Lemma:filhar≠filha § Cat:VERB≠NOUN | Lemma:filhar≠filha § Cat:VERB≠NOUN] 
+	
+13: Casou-se com Júlia Morais, com que teve uma filha.  ['filha' Lemma:filho≠filha | Lemma:filho≠filha § Cat:ADJ≠NOUN | Lemma:filhar≠filha § Cat:VERB≠NOUN | Lemma:filhar≠filha § Cat:VERB≠NOUN] 
+	
+13: Casou-se com Júlia Morais, com que teve uma filha.  ['filha' Lemma:filho≠filha | Lemma:filho≠filha § Cat:ADJ≠NOUN | Lemma:filhar≠filha § Cat:VERB≠NOUN | Lemma:filhar≠filha § Cat:VERB≠NOUN] 
+
+
+NF-Contudo 3
+	
+11: Contudo, com a eleição de Ronaldo Lessa, do PSB, para a prefeitura de Maceió, foi nomeada secretária municipal de Saúde.  ['Contudo' NF] 
+	
+37: Contudo, dias depois, Cabral convocou os deputados estaduais em caráter extraordinário para votar uma nova lei estabelecendo os pisos de 220, 223 e 226 reais para 39 categorias profissionais.  ['Contudo' NF] 
+	
+123: Contudo, no dia 23 de junho de 2014, Cabral abriu mão da sua candidatura ao Senado Federal, passando a apoiar o nome de Cesar Maia, do Democratas (DEM).  ['Contudo' NF] 
+
+
+NF-Urbanitários 2
+	
+6: Nesse mesmo ano tornou-se secretário-geral do Sindicato dos Urbanitários de Alagoas.  ['Urbanitários' NF] 
+	
+8: Em 1990, tornou-se secretário de Formação e, em 1993, presidente do Sindicato dos Urbanitários, cargo que ocuparia até 1999.  ['Urbanitários' NF] 
+
+
+NF-células-tronco 2
+	
+13: No STF, foi relator da Ação Direta de Inconstitucionalidade (ADI) impetrada pela Procuradoria Geral da República e pela Confederação Nacional dos Bispos do Brasil (CNBB), relativa à inconstitucionalidade do art. 5º da Lei de Biossegurança (Lei nº 11.105/05), que autorizava o uso de células-tronco embrionárias em pesquisas científicas.  ['art.' NF]  ['5º' NF]  ['nº' NF]  ['células-tronco' NF] 
+	
+15: Em maio de 2008, por seis votos a cinco, incluindo seu voto favorável, a ação foi julgada improcedente, permitindo-se o uso, em pesquisas científicas, das células-tronco, desde que inviáveis para implantação no útero materno, congeladas há mais de três anos e mediante autorização dos genitores.  ['células-tronco' NF] 
+
+
+DI-entanto 2
+	
+19: No entanto, a maioria do plenário optou por sua manutenção.  ['entanto' Cat:ADV≠NOUN] 
+	
+113: A popularidade de Cabral, no entanto, continuava a decrescer nos últimos meses de seu governo.  ['entanto' Cat:ADV≠NOUN] 
+
+
+DI-terceiro 2
+	
+10: Nas eleições de 2006, concorreu a governador de Roraima, mas não foi eleito, ficando em terceiro lugar.  ['terceiro' Cat:NOUN≠ADJ | Lemma:terceirar≠terceiro § Cat:VERB≠ADJ] 
+	
+13: Candidatou-se com sucesso para o seu terceiro mandato de deputado estadual em 1994.  ['Candidatou' Lemma:candidatar≠Candidatar]  ['terceiro' Cat:NOUN≠ADJ | Lemma:terceirar≠terceiro § Cat:VERB≠ADJ] 
+
+
+NF-não-índios 2
+	
+18: A partir de então, conflitos entre índios e não-índios tornaram-se freqüentes.  ['partir' Cat:VERB≠NOUN | Cat:VERB≠NOUN | Cat:VERB≠NOUN | Cat:VERB≠NOUN | Cat:VERB≠NOUN]  ['não-índios' NF] 
+	
+20: Após julgamento, em março de 2009, ficou decidido que a reserva seria mantida com seus limites intactos e que os não-índios deveriam ser retirados e indenizados.  ['decidido' Lemma:decidido≠decidir,decidido | Lemma:decidir≠decidir,decidido § Cat:VERB≠ADJ]  ['não-índios' NF] 
+
+
+NF-odontóloga 2
+	
+3: Formou-se em odontologia pela Universidade Federal de Alagoas em 1975 e nesse mesmo ano foi aprovada em concurso para odontóloga da prefeitura municipal de Messias (AL), onde permaneceu até abril de 1979.  ['odontóloga' NF] 
+	
+4: Novamente aprovada em concurso, tornou-se então a odontóloga do Instituto Nacional de Assistência Médica da Previdência Social (INAMPS).  ['odontóloga' NF] 
+
+
+NF-diretor-superintendente 2
+	
+5: Transferiu-se então para Manaus e aí instalou, em sociedade com o irmão Carlos Antônio De Carli, uma fábrica de roupas, a Raymond Comércio e Indústria S.A., da qual seria diretor-superintendente durante dez anos.  ['diretor-superintendente' NF] 
+	
+6: Em 1972 tornou-se, simultaneamente, diretor-superintendente da Agroindustrial Fazendas Unidas S.A. em Itacoatiara (AM), pertencente à Agropecuária Capemi Indústria e Comércio, na qual permaneceria até 1980.  ['diretor-superintendente' NF] 
+
+
+NF-segundo-vice-presidente 2
+	
+47: Em fevereiro de 1991, com a eleição da nova mesa diretora do Senado, passou a integrá-la como segundo-vice-presidente, função que exerceria até 1993.  ['integrá' NF]  ['segundo-vice-presidente' NF] 
+	
+10: Atuou como titular, ainda, da Comissão Parlamentar de Inquérito (CPI) sobre a biopirataria e da CPI do Tráfico de Órgãos Humanos, da qual foi segundo-vice-presidente e relator.  ['segundo-vice-presidente' NF] 
+
+
+NF-nº 2
+	
+7: Participou ainda de comissões especiais referentes a propostas de emenda constitucional (PEC), como a de nº 22/99, que acabava com a exigência de prazo para dar entrada em pedidos de divórcio, e a de nº 270/08, que garantia proventos integrais ao servidor que se aposentasse por invalidez.  ['nº' NF]  ['nº' NF] 
+	
+6: Integrou em 1997 o grupo de trabalho encarregado de elaborar a proposta do projeto de lei de criação da Abin apresentada ao Congresso Nacional que resultou na edição da Lei nº 9.883, de 7 de dezembro de 1999, que instituiu o Sistema Brasileiro de Inteligência (Sisbin) e criou a Abin.  ['nº' NF] 
+
+
+DI-Municipal 2
+	
+8: Foi líder da legenda na Câmara Municipal.  ['Municipal' Lemma:municipal≠Municipal § Cat:NOUN≠ADJ | Lemma:municipal≠Municipal] 
+	
+8: Foi líder da legenda na Câmara Municipal.  ['Municipal' Lemma:municipal≠Municipal § Cat:NOUN≠ADJ | Lemma:municipal≠Municipal] 
+
+
+DI-executiva 2
+	
+15: Em 2003 ingressou no Partido Trabalhista Brasileiro (PTB) e passou a fazer parte da executiva municipal.  ['executiva' Lemma:executivo≠executiva | Lemma:executivo≠executiva § Cat:ADJ≠NOUN] 
+	
+11: Filiado ao Partido Socialista Brasileiro (PSB), em 1998 presidiu a executiva regional em Alagoas.  ['executiva' Lemma:executivo≠executiva | Lemma:executivo≠executiva § Cat:ADJ≠NOUN] 
+
+
+DI-envolvidos 2
+	
+30: Recorreu da aplicação da pena e, em Abril, publicou um relato em seu blog pessoal confessando o malfeito e questionando o fato de ter sido o único dentre os mais de 80 envolvidos a ser condenado.  ['envolvidos' Cat:ADJ≠NOUN | Lemma:envolver≠envolvido § Cat:VERB≠NOUN] 
+	
+30: A troca de denúncias, negadas pelos envolvidos, expôs a disputa pelo controle do PSDB fluminense entre Marcelo Alencar e Sérgio Cabral.  ['envolvidos' Cat:ADJ≠NOUN | Lemma:envolver≠envolvido § Cat:VERB≠NOUN] 
+
+
+DI-idosos 2
+	
+14: Na legislatura 1991-1995 foi líder da bancada do PSDB na Assembleia Legislativa do Estado do Rio de Janeiro (Alerj) e pautou sua atuação na defesa dos idosos.  ['idosos' Cat:ADJ≠NOUN] 
+	
+46: Presidiu, também, a Comissão Parlamentar de Inquérito (CPI) que apurou denúncias de maus tratos contra idosos em instituições públicas e privadas.  ['idosos' Cat:ADJ≠NOUN] 
+
+
+NF-pré-candidatura 2
+	
+34: Em abril de 2000, retirou sua pré-candidatura à prefeitura do Rio de Janeiro na legenda do PMDB, e anunciou seu apoio à reeleição de Luís Paulo Conde, que foi derrotado no segundo turno por César Maia, então filiado ao Partido Trabalhista Brasileiro (PTB).  ['pré-candidatura' NF] 
+	
+121: Cabral se colocava como postulante a uma vaga no Senado Federal, enquanto Luiz Fernando Pezão confirmava, ao assumir o governo, sua pré-candidatura ao executivo estadual fluminense.  ['postulante' Cat:ADJ≠NOUN]  ['pré-candidatura' NF] 
+
+
+DI-maiores 2
+	
+59: O governador e os secretários de saúde Sérgio Côrtes e de governo Wilson Carlos foram fotografados com o empresário Fernando Cavendish, dono da empresa Delta Construções, uma das maiores prestadoras de serviço do estado.  ['maiores' Lemma:maior≠grande § Cat:NOUN≠ADJ | Gender:Masc≠Fem § Lemma:maiores≠grande § Cat:NOUN≠ADJ | Lemma:maior≠grande] 
+	
+100: Entretanto, um dos maiores desafios enfrentados pelo governador foi o desaparecimento do pedreiro Amarildo de Souza, no dia 14 de julho de 2013.  ['maiores' Lemma:maior≠grande § Cat:NOUN≠ADJ | Lemma:maiores≠grande § Cat:NOUN≠ADJ | Lemma:maior≠grande] 
+
+
+NF-vice-prefeito 1
+	
+10: Em 1996, candidatou-se a vice-prefeito de Maceió na chapa encabeçada por Heloísa Helena, que perdeu a eleição no segundo turno para Kátia Born, do Partido Socialista Brasileiro (PSB).  ['vice-prefeito' NF] 
+
+
+DI-Foro 1
+	
+2: Ingressou na Faculdade de Direito da Universidade Federal de Sergipe (UFSE) em 1962 e, após graduar-se em 1966, passou a exercer a advocacia no Foro da capital sergipana.  ['Foro' Lemma:foro≠Foro] 
+
+
+NF-consultor-geral 1
+	
+3: Foi consultor-geral do Estado entre 1975 e 1979, procurador do Tribunal de Contas do Estado de Sergipe (TCE-SE) de 1979 a 1980 e procurador-geral de Justiça de 1983 a 1984.  ['consultor-geral' NF] 
+
+
+DI-previdenciário 1
+	
+9: Também foi favorável ao desconto previdenciário dos funcionários inativos e pensionistas, capítulo importante da reforma da previdência do governo Lula.  ['previdenciário' Cat:NOUN≠ADJ] 
+
+
+DI-indígena 1
+	
+16: Ainda nesse mês, foi o relator de outro mandado de segurança, cujo objetivo era a impugnação da demarcação dos limites de uma área contínua para a reserva indígena Raposa/Serra do Sol.  ['indígena' Lemma:indígena≠indígeno § Cat:NOUN≠ADJ | Lemma:indígena≠indígeno] 
+
+
+DI-PP 1
+	
+8: Em 2007, foi escolhido presidente do PP em Tocantins.  ['PP' Number:Plur≠Sing § Lemma:p≠pp] 
+
+
+DI-vencedor 1
+	
+11: O vencedor foi Otomar Pinto, do Partido da Social Democracia Brasileira (PSDB).  ['vencedor' Cat:ADJ≠NOUN] 
+
+
+NF-ex-parlamentares 1
+	
+23: A comissão de sindicância interna aberta para apurar o caso identificou cerca de 663 atos não-publicados e o envolvimento de 37 senadores e 24 ex-parlamentares.  ['não-publicados' NF]  ['ex-parlamentares' NF] 
+
+
+NF-ex-diretor-geral 1
+	
+27: Foram considerados responsáveis o ex-diretor-geral, Agaciel Maia, e o ex-diretor de Recursos Humanos, João Carlos Zoghbi, que, por suas funções, deveriam se ocupar da publicação dos atos administrativos.  ['ex-diretor-geral' NF] 
+
+
+DI-Câmara 1
+	
+7: Assumiu sua cadeira na Câmara dos Deputados em fevereiro de 2007 e no período seguinte integrou o diretório nacional de seu partido.  ['Câmara' Lemma:câmara≠Câmara] 
+
+
+DI-fundadoras 1
+	
+8: Em 1985, deixou o PMDB e foi uma das fundadoras do Partido Socialista Brasileiro (PSB) em seu estado.  ['fundadoras' Lemma:fundador≠fundadora | Lemma:fundador≠fundadora § Cat:ADJ≠NOUN] 
+
+
+NF-mensalão 1
+	
+21: Ainda nesse ano foi citada pela Comissão Parlamentar Mista de Inquérito (CPMI) dos Correios como receptora de cem mil reais da empresa de publicidade DNA, de Marcos Valério, apontado pela comissão como agenciador do “esquema do mensalão”.  ['receptora' Lemma:receptor≠receptora | Lemma:receptor≠receptora § Cat:ADJ≠NOUN]  ['mensalão' NF] 
+
+
+DI-deputada 1
+	
+23: Nas eleições de outubro de 2006 candidatou-se a deputada federal por Alagoas na legenda do PSB e obteve uma suplência.  ['deputada' Lemma:deputado≠deputada | Lemma:deputado≠deputada § Cat:ADJ≠NOUN | Lemma:deputar≠deputada § Cat:VERB≠NOUN] 
+
+
+DI-Solteira 1
+	
+26: Solteira, adotou um filho.  ['Solteira' Cat:NOUN≠ADJ | Lemma:solteiro≠solteira § Cat:NOUN≠ADJ | Lemma:solteiro≠solteira] 
+
+
+DI-finanças 1
+	
+3: Em 1971 cursou o mestrado em engenharia industrial, com especialização em finanças, também na PUC-Rio.  ['finanças' Lemma:finança≠finanças] 
+
+
+DI-Participações 1
+	
+7: BNDE Participações de 1977 a 1979.  ['Participações' Number:Plur≠Sing] 
+
+
+DI-vez 1
+	
+11: Entre 1985 e 1990, mais uma vez afastado do BNDES, que já incorporara o ‘S’ de ‘Social’, ocupou cargos de destaque no setor privado: foi presidente da Pronor Petroquímica S.A., diretor do BBM–Banco da Bahia Investimentos S.A., além de membro dos conselhos de administração da Engepack Embalagens S.A. e da Yokogawa Latinamerica S.A.  ['vez' Gender:Fem≠Masc] 
+
+
+NF-17ª 1
+	
+32: Em 4 de março de 2009, Pio Borges, junto com os demais acusados, foi absolvido pela Justiça Federal, por sentença dada pelo juiz titular da 17ª Vara Federal de Brasília, Moacir Ferreira Ramos.  ['17ª' NF] 
+
+
+DI-acionistas 1
+	
+33: Pio Borges também foi acusado de favorecer, durante o processo de privatização da Vale do Rio Doce, a Valecom, consórcio do qual participavam a Anglo American e o Banco Safra, ambos acionistas da Aracruz Celulose, de cujo conselho de administração era membro desde novembro de 1996.  ['acionistas' Cat:ADJ≠NOUN] 
+
+
+DI-substituto 1
+	
+3: Exerceu o cargo de secretário de Saúde substituto no Rio Grande do Sul, em 1978, no final do governo de Sinval Guazelli (da Aliança Renovadora Nacional, Arena, de 1975 a 1979).  ['Saúde' Lemma:saúde≠Saúde | Lemma:saudar≠Saúde § Cat:VERB≠NOUN | Lemma:saudar≠Saúde § Cat:VERB≠NOUN | Lemma:saudar≠Saúde § Cat:VERB≠NOUN]  ['substituto' Lemma:substituto≠substitugar § Cat:NOUN≠VERB | Lemma:substituto≠substitugar § Cat:ADJ≠VERB] 
+
+
+DI-Filiado 1
+	
+8: Filiado originalmente ao PDS, no ano de 1985 ingressou no Partido da Frente Liberal (PFL).  ['Filiado' Lemma:filiado≠Filiar § Cat:ADJ≠VERB | Lemma:filiar≠Filiar] 
+
+
+DI-Defesa 1
+	
+10: Ao assumir, tornou-se relator da Comissão de Defesa do Cidadão, Saúde e Meio Ambiente da Constituinte estadual.  ['assumir' Cat:VERB≠NOUN | Cat:VERB≠NOUN | Cat:VERB≠NOUN | Cat:VERB≠NOUN | Cat:VERB≠NOUN]  ['Comissão' Lemma:comissão≠Comissão]  ['Defesa' Lemma:defesa≠Defesa | Lemma:defeso≠Defesa | Lemma:defeso≠Defesa § Cat:ADJ≠NOUN | Lemma:defender≠Defesa § Cat:VERB≠NOUN] 
+
+
+DI-permaneceria 1
+	
+11: No ano de 1990 ocupou a presidência do Diretório Regional do PFL, em Porto Alegre, cargo em que permaneceria até 2003.  ['permaneceria' Person:1≠3 § Mood:Cnd≠Ind § Lemma:permanecer≠permanecerir | Mood:Cnd≠Ind § Lemma:permanecer≠permanecerir] 
+
+
+DI-Movimento 1
+	
+14: Mas pouco depois de ser empossado nessa nova legislatura, licenciou-se para assumir a Secretaria de Saúde no governo de Antônio Brito (1995-1999), do Partido do Movimento Democrático Brasileiro (PMDB).  ['Movimento' Lemma:movimento≠Movimento | Lemma:movimentar≠Movimento § Cat:VERB≠NOUN] 
+
+
+DI-consecutiva 1
+	
+16: Nas eleições de outubro, conseguiu pela quarta vez consecutiva a cadeira de deputado estadual.  ['quarta' Lemma:quarta≠quarto § Cat:NOUN≠ADJ | Cat:NOUN≠ADJ | Lemma:quartar≠quarto § Cat:VERB≠ADJ | Lemma:quartar≠quarto § Cat:VERB≠ADJ]  ['consecutiva' Lemma:consecutiva≠consecutiver § Cat:NOUN≠VERB | Lemma:consecutivo≠consecutiver § Cat:NOUN≠VERB | Lemma:consecutivo≠consecutiver § Cat:ADJ≠VERB] 
+
+
+DI-quarto 1
+	
+17: No ano 2000 candidatou-se a prefeitura de Porto Alegre, na legenda do PFL, obtendo o quarto lugar, no pleito que acabaria sendo vencido, no segundo turno, pelo candidato do Partido dos Trabalhadores (PT), Tarso Genro.  ['quarto' Cat:NOUN≠ADJ | Lemma:quartar≠quarto § Cat:VERB≠ADJ] 
+
+
+DI-obtiveram 1
+	
+19: Não obtiveram, porém, a vitória, que coube a Germano Rigotto, candidato do PMDB.  ['obtiveram' Lemma:obter≠obtiver | Tense:Pqp≠Past § Lemma:obter≠obtiver] 
+
+
+DI-Departamento 1
+	
+3: Integrou por mais de duas décadas o quadro de funcionários do Banco do Nordeste do Brasil (BNB), no qual exerceu as funções de superintendente financeiro, chefe do Departamento de Administração e chefe das Divisões de Orçamento e Controle e de Análise e Planejamento Financeiro.  ['Departamento' Lemma:departamento≠Departamento] 
+
+
+NF-superintendente-geral 1
+	
+6: Em abril desse mesmo ano, assumiu o cargo de superintendente-geral da Bolsa de Valores Regional, cuja área de atuação envolve os estados do Rio Grande do Norte, Ceará, Piauí, Maranhão, Pará, Amazonas e Roraima.  ['superintendente-geral' NF] 
+
+
+DI-frente 1
+	
+13: No decorrer de sua gestão frente ao Ministério, deu continuidade ao projeto de integração do rio São Francisco e empreendeu o início das obras de construção da Ferrovia Transnordestina.  ['frente' Cat:NOUN≠ADV] 
+
+
+NF-aquaviário 1
+	
+16: O objetivo era a execução de medidas, programas e projetos de apoio ao desenvolvimento da infraestrutura do setor, além da participação no planejamento estratégico e a aprovação dos planos de outorgas, para assegurar segurança e eficiência ao transporte aquaviário de cargas e de passageiros.  ['aquaviário' NF] 
+
+
+DI-decidido 1
+	
+20: Com a rejeição da emenda Dante de Oliveira, ficou decidido que o próximo presidente da República seria eleito por via indireta.  ['decidido' Lemma:decidido≠decidir,decidido | Lemma:decidir≠decidir,decidido § Cat:VERB≠ADJ] 
+
+
+DI-vencedores 1
+	
+22: No Colégio Eleitoral reunido em 15 de janeiro de 1985, De Carli votou nos candidatos oposicionistas, que saíram vencedores.  ['vencedores' Cat:ADJ≠NOUN] 
+
+
+NF-Porém 1
+	
+23: Porém, a doença de Tancredo na véspera de sua posse em 15 de março fez com que Sarney assumisse o governo em caráter interino.  ['Porém' NF] 
+
+
+DI-Código 1
+	
+28: Contudo, o deputado Mário Frota, do Partido Socialista Brasileiro (PSB), candidato derrotado ao Senado, entrou com recurso no Supremo Tribunal Federal (STF) para conseguir sua impugnação, alegando que De Carli não teria “condição moral para o exercício do cargo” e pedindo anulação de seus votos com base no artigo 151 do Código Eleitoral.  ['Contudo' NF]  ['Código' Lemma:código≠Código] 
+
+
+NF-processá 1
+	
+30: Ao tomar conhecimento das acusações do deputado, De Carli ameaçou processá-lo por calúnia e difamação, mas isso acabou não acontecendo.  ['processá' NF] 
+
+
+DI-fracassada 1
+	
+32: Baumgarten havia feito uma tentativa fracassada de reeditar a revista «O Cruzeiro», para a qual havia recebido recursos públicos através do Serviço Nacional de Informações (SNI).  ['fracassada' Cat:ADJ≠VERB | Lemma:fracassar≠fracassado] 
+
+
+NF-ex-tesoureiro 1
+	
+48: As denúncias de irregularidades no governo do presidente Fernando Collor (1990-1992) veiculadas na imprensa com muita frequência ao longo de 1991 atingiram o clímax em maio de 1992, quando a revista «Veja» publicou uma matéria com Pedro Collor, irmão do presidente, na qual este denunciava a existência de um esquema de corrupção no governo sob o comando de Paulo César Farias, o PC, ex-tesoureiro da campanha presidencial.  ['ex-tesoureiro' NF] 
+
+
+DI-suspensos 1
+	
+54: Pouco depois, com o voto favorável do senador De Carli, o plenário do Senado aprovou o «impeachment» do chefe do Executivo federal, que em consequência teve os seus direitos políticos suspensos por oito anos.  ['suspensos' Lemma:suspenso≠suspensder § Cat:ADJ≠VERB | Lemma:suspender≠suspensder] 
+
+
+NF-Rondônia 1
+	
+9: Foi também terceiro vice-presidente da Comissão Especial dos Servidores de Rondônia, membro da Comissão Especial de Políticas Públicas para a Juventude e da Comissão Especial Elegibilidade de Cônjuge e Parentes.  ['terceiro' Cat:NOUN≠ADJ | Lemma:terceirar≠terceiro § Cat:VERB≠ADJ]  ['vice-presidente' NF]  ['Rondônia' NF] 
+
+
+NF-ex-presidente 1
+	
+11: Em 2006, foi ao Haiti em missão oficial, representando o Brasil como observador nas eleições presidenciais, que não ocorriam desde a queda do ex-presidente haitiano Jean-Bertrand Aristide, em fevereiro de 2004.  ['ex-presidente' NF] 
+
+
+NF-pós-graduação 1
+	
+10: Concluiu a pós-graduação em urbanismo nas Faculdades Canoenses, em 1983.  ['pós-graduação' NF] 
+
+
+NF-2º 1
+	
+11: No ano seguinte, formou-se técnico de 2º grau em transações imobiliárias em Porto Alegre.  ['2º' NF] 
+
+
+NF-vice-liderança 1
+	
+17: Assumiu o mandato de vereador em fevereiro de 2005, ocupando a vice-liderança da bancada do partido, mas licenciou-se para reassumir a secretaria de Planejamento Urbano na gestão de Marcos Antonio Ronchetti, prefeito reeleito.  ['vice-liderança' NF] 
+
+
+DI-Deputados 1
+	
+21: Renunciou ao mandato de vereador e em fevereiro de 2007 foi empossado na Câmara dos Deputados.  ['Deputados' Number:Plur≠Sing § Lemma:deputado≠Deputados | Number:Plur≠Sing § Lemma:deputado≠Deputados § Cat:ADJ≠NOUN | Number:Plur≠Sing § Lemma:deputar≠Deputados § Cat:VERB≠NOUN] 
+
+
+NF-terceiro-secretário 1
+	
+2: Ingressou no curso de preparação à carreira de diplomata do Instituto Rio Branco em 1966, sendo nomeado terceiro-secretário em novembro de 1967.  ['terceiro-secretário' NF] 
+
+
+NF-segundo-secretário 1
+	
+4: Em 1970, foi enviado para a embaixada em Moscou e, em 10 de novembro, foi promovido a segundo-secretário.  ['segundo-secretário' NF] 
+
+
+NF-ministro-conselheiro 1
+	
+10: Em junho de 1983, foi promovido a ministro de segunda classe e no ano seguinte tornou-se ministro-conselheiro na embaixada brasileira em Montevidéu.  ['ministro-conselheiro' NF] 
+
+
+NF-não-confiança 1
+	
+16: Segundo a revista «Veja», sua saída deveu-se a pressões do governo norte-americano, que em março daquele ano propôs, na reunião do conselho executivo do órgão, uma moção de não-confiança visando a retirada do diplomata brasileiro.  ['não-confiança' NF] 
+
+
+NF-5º 1
+	
+4: Em 1988 ingressou na Polícia Militar (PM) e passou a integrar o 5º Batalhão da PM em Minas Gerais.  ['5º' NF] 
+
+
+DI-expulso 1
+	
+7: Em dezembro do mesmo ano, foi expulso da PM por sua atuação no movimento grevista.  ['expulso' Lemma:expulso≠expulr § Cat:ADJ≠VERB | Lemma:expulsar≠expulr | Lemma:expulsar≠expulr] 
+
+
+NF-pré-candidato 1
+	
+11: Em 2000 foi pré-candidato à prefeitura de Belo Horizonte, mas renunciou à candidatura e passou a apoiar Célio de Castro, candidato à reeleição na legenda do Partido Socialista Brasileiro (PSB).  ['pré-candidato' NF] 
+
+
+DI-superfaturados 1
+	
+23: Em 2006, teve a cassação de seu mandato recomendada pelo Conselho de Ética da Câmara dos Deputados por seu envolvimento no “escândalo dos sanguessugas”, como ficou conhecida a atuação da empresa Planam, que, com apoio de deputados federais e senadores que apresentavam emendas ao orçamento da União, obtinha recursos para fraudar licitações e vender ambulâncias para prefeituras com valores superfaturados.  ['sanguessugas' Gender:Fem≠Masc]  ['superfaturados' Lemma:superfaturado≠superfaturar § Cat:ADJ≠VERB] 
+
+
+DI-sanguessugas 1
+	
+29: No ano seguinte, a Justiça Federal o condenou ao pagamento de uma multa pelo envolvimento no caso da “Máfia das Ambulâncias” ou “escândalo dos sanguessugas”, como ficou conhecido o evento quatro anos antes.  ['sanguessugas' Gender:Fem≠Masc] 
+
+
+DI-museóloga 1
+	
+3: Sua mãe, professora e museóloga, dirigiu o Museu da República e também o Centro de Memória e Documentação da Fundação Casa de Rui Barbosa entre 1997 e 2003.  ['museóloga' Lemma:museólogo≠museóloga] 
+
+
+DI-votado 1
+	
+15: Reeleito em 1994 como o mais votado do estado, com 124.997 votos, ao iniciar o novo mandato em fevereiro do ano seguinte foi escolhido presidente da Alerj.  ['votado' Cat:ADJ≠NOUN | Lemma:votar≠votado § Cat:VERB≠NOUN] 
+
+
+DI-Legislativo 1
+	
+16: Determinou então uma auditoria na Casa, limitando o salário dos servidores públicos do Legislativo fluminense em até 9,6 mil reais e criando um redutor para todos os vencimentos que ultrapassassem esse valor.  ['Legislativo' Cat:ADJ≠NOUN] 
+
+
+DI-terceira 1
+	
+22: Em outubro de 1998, foi pela terceira vez eleito deputado estadual, tendo conquistado 378.242 votos, a maior votação para o cargo em todo o país.  ['terceira' Lemma:terceira≠terceiro § Cat:NOUN≠ADJ | Cat:NOUN≠ADJ | Lemma:terceirar≠terceiro § Cat:VERB≠ADJ | Lemma:terceirar≠terceiro § Cat:VERB≠ADJ] 
+
+
+DI-Finanças 1
+	
+25: A denúncia afirmava ainda que um dos articuladores da negociação seria o secretário de Finanças e filho do governador, Marco Aurélio Alencar.  ['articuladores' Cat:ADJ≠NOUN]  ['Finanças' Number:Plur≠Sing § Lemma:finança≠finanças] 
+
+
+NF-subprocurador-geral 1
+	
+29: Em 1999, essa investigação seria arquivada pelo subprocurador-geral de Justiça Elio Fischberg.  ['subprocurador-geral' NF] 
+
+
+NF-recém-empossado 1
+	
+31: Em janeiro de 1999, Cabral fez um acordo com o recém-empossado governador do Rio de Janeiro Anthony Garotinho, então filiado ao Partido Democrático Trabalhista (PDT), pelo qual assegurou o controle das duas principais comissões da Alerj, a de Justiça e a de Orçamento, enquanto Garotinho garantiu condições de governabilidade.  ['recém-empossado' NF] 
+
+
+DI-previdenciárias 1
+	
+38: Em 2001, presidiu a comissão parlamentar de inquérito (CPI) que apurou o tratamento concedido à população idosa por instituições assistenciais, previdenciárias e outras organizações públicas ou privadas no estado do Rio de Janeiro.  ['previdenciárias' Cat:NOUN≠ADJ] 
+
+
+NF-Alerj 1
+	
+39: Enquanto presidente da Alerj, firmou importantes convênios na esfera acadêmica, com o Centro de Pesquisa e Documentação de História Contemporânea do Brasil da Fundação Getúlio Vargas (Cpdoc-FGV) e com a Pontifícia Universidade Católica do Rio de Janeiro (PUC-Rio).  ['Alerj' NF] 
+
+
+DI-visitantes 1
+	
+42: Além de orientar os visitantes nacionais e estrangeiros, os guias atenderam também a milhares de estudantes da rede pública estadual que, com o apoio da Alerj, visitaram o palácio.  ['visitantes' Cat:ADJ≠NOUN] 
+
+
+DI-Idoso 1
+	
+45: Como presidente da Comissão do Idoso, empenhou-se em aprovar o Estatuto do Idoso, o que finalmente ocorreu em 3 de outubro de 2003.  ['Idoso' Cat:ADJ≠NOUN] 
+
+
+DI-jatinho 1
+	
+68: Em junho de 2011, três dias após um acidente de helicóptero em Porto Seguro, foi noticiado que Sérgio Cabral teria viajado para o sul da Bahia em um jatinho do empresário Eike Batista, em companhia de Fernando Cavendish.  ['jatinho' Lemma:jato≠jatinho] 
+
+
+NF-resort 1
+	
+69: Segundo fontes ligadas à imprensa fluminense, Cabral se dirigia com o grupo para o aniversário de Cavendish em um resort, mas o acidente teria interrompido os planos.  ['resort' NF] 
+
+
+DI-graças 1
+	
+90: Ao longo do mês os protestos ganharam força, especialmente graças à, igualmente crescente, repressão policial.  ['graças' Lemma:graça≠graças § Cat:NOUN≠ADV] 
+
+
+DI-ótimo 1
+	
+99: No final do mês, sua popularidade caíra para 12% entre os cariocas que consideravam seu governo bom ou ótimo, segundo pesquisa encomendada pela Confederação Nacional da Indústria (CNI).  ['caíra' Person:1≠3 § Tense:Pqp≠Pres | Tense:Pqp≠Pres]  ['ótimo' Lemma:ótimo≠bom] 
+
+
+DI-concessionárias 1
+	
+104: A solicitação foi feita usando como base outra reportagem da revista «Veja», que revelou contratos do escritório de advocacia da primeira-dama Adriana Ancelmo com concessionárias e prestadoras de serviço do estado.  ['concessionárias' Lemma:concessionário≠concessionária | Lemma:concessionário≠concessionária § Cat:ADJ≠NOUN] 
+
+
+DI-esposa 1
+	
+107: Sérgio Cabral, por sua vez, afirmou à imprensa que não interferia nos negócios da esposa.  ['por' NF]  ['vez' Gender:Fem≠Masc]  ['esposa' Lemma:esposo≠esposa | Lemma:esposar≠esposa § Cat:VERB≠NOUN | Lemma:esposar≠esposa § Cat:VERB≠NOUN] 
+
+
+NF-35ª 1
+	
+118: Em março de 2014, na 35ª Vara Criminal do Tribunal de Justiça do Estado do Rio de Janeiro, aconteceu a audiência de instrução e julgamento de 25 policiais militares acusados de envolvimento no desaparecimento e morte presumida do pedreiro Amarildo.  ['35ª' NF] 
+
+
+DI-nono 1
+	
+128: Em outubro de 2014, apesar da pouca exposição pública, Cabral comemorou a reeleição do seu aliado Pezão para o governo do estado do Rio de Janeiro, com 55,78% dos votos válidos, bem como a eleição de seu filho Marco Antonio Cabral para a Câmara dos Deputados, que com apenas 23 anos e se candidatando pela primeira vez, foi nono candidato eleito, com 119.584 votos.  ['nono' Cat:NOUN≠ADJ] 
+
+
+DI-advogada 1
+	
+130: Divorciado, casou-se com a advogada Adriana Ancelmo Cabral e teve dois filhos.  ['advogada' Lemma:advogado≠advogada | Lemma:advogado≠advogada § Cat:ADJ≠NOUN | Lemma:advogar≠advogada § Cat:VERB≠NOUN] 
+
+
