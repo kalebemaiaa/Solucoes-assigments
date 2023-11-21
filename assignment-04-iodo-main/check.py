@@ -87,6 +87,27 @@ def readMorpho(path):
 def errors2string(errors):
     return " | ".join([ " § ".join([ "%s:%s≠%s" %(e[0],e[1],e[2]) for e in ue]) for ue in errors])
 
+def unify(getted, token_form):
+    unified = min(getted, key = len) 
+    lista = []
+    #para cada possivel forma do que tem menos formas
+    for forma in unified:
+        #procurar nos outros se eles tem akl forma, caso não, passar par ao prox
+        for to_add in getted:
+            if to_add == unified: continue
+            for form in to_add:
+                if form.get("Cat") != forma.get("Cat"): continue
+                for x in ["Lemma", "Form"]:
+                    if x in forma:
+                       forma.update({x: token_form}) 
+                    if x in form:
+                        form.update({x: token_form}) 
+                if forma.unify(form): 
+                    lista.append(forma)
+
+    print("-> ", lista)
+    return lista
+    
 def proc1(morpho, content):
     data_errors = {}
 
@@ -102,17 +123,12 @@ def proc1(morpho, content):
                 if token["misc"] and "CorrectForm" in token["misc"]:
                     token_form = token["misc"]["CorrectForm"]
                 tfs = token_to_fst((token_form).lower(),token["lemma"],token["upos"],token["feats"])
-                
-                
                 candidates = None
-                
                 
                 if "-" in token_form:
                     token_splited = token_form.split("-")
-                    for word in token_splited:
-                        getted = morpho.get(word.lower())
-                        for atributte in getted:
-                            print("form" in atributte, atributte)
+                    getted = [morpho.get(word) for word in token_splited]
+                    candidates = unify(getted, token_form)
                         
                 else:
                     candidates =  morpho.get(token_form.lower())  
