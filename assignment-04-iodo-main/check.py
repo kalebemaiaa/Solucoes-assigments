@@ -16,11 +16,11 @@ from collections import defaultdict
 def eprint(*args, **kwargs):
     print(*args, file=sys.stderr, **kwargs)
 
-with open('morphobr_to_bosque.json',  encoding="utf8") as f:
+with open('morphobr_to_bosque.json', encoding="utf8") as f:
     morphobr_to_bosque = json.load(f)
 
 
-def check(token_fst, entries):
+def check(token_fst,entries):
     """Return the list of conflicting attribute-value pairs between a
     treebank feature structure for a token and a list of dictionary
     entries for this token. If the structures unify with at least one
@@ -67,7 +67,7 @@ def find_error(fs1,fs2):
 
 
 def extract_entries(d, infile):
-    with open(infile,  encoding="utf8") as f:
+    with open(infile, encoding="utf8") as f:
         for line in f.readlines():
             form, fs = entry_to_fst(line)
             d[form].append(fs)
@@ -87,53 +87,57 @@ def readMorpho(path):
 def errors2string(errors):
     return " | ".join([ " § ".join([ "%s:%s≠%s" %(e[0],e[1],e[2]) for e in ue]) for ue in errors])
 
-
 def proc1(morpho, content):
     data_errors = {}
 
     for sent in conllu.parse_incr(content):
-        msg = "\n%s: %s " % (sent.metadata.get('sent_id'), sent.metadata.get('text'))
-        flag = False
-        key = None
         for token in sent:
+            msg = "\n%s: %s " % (sent.metadata.get('sent_id'), sent.metadata.get('text'))
+            flag = False
+            key = None
             if token["upos"] in ["ADJ","ADV","NOUN","VERB"]:
-                ################################################
-                ## Podemos fazer de duas formas:
                 token_form = token["form"]
+                # Se existir o campo 'CorrectForm', então trocamos token_form
+                # por essa forma corrigida.
                 if token["misc"] and "CorrectForm" in token["misc"]:
                     token_form = token["misc"]["CorrectForm"]
                 tfs = token_to_fst((token_form).lower(),token["lemma"],token["upos"],token["feats"])
                 
-                ################################################
-                # OU ASSIM:
-                #nao sei se todo typo = Yes significa que haverá uma forma correta
-                # if isinstance(token["feats"], dict):
-                #     if "Typo" in token["feats"] and token["feats"]["Typo"] == "Yes":
-                #         token_form = token["misc"]["CorrectForm"]
                 
-                candidates = morpho.get(token_form.lower()) 
-                if   token_form.lower() == "filha":
-                    print("entries -> ", candidates)
-                    print("token fst -> ", tfs)
+                candidates = None
+                
+                
+                if "-" in token_form:
+                    token_splited = token_form.split("-")
+                    for word in token_splited:
+                        getted = morpho.get(word.lower())
+                        for atributte in getted:
+                            print("form" in atributte, atributte)
+                        
+                else:
+                    candidates =  morpho.get(token_form.lower())  
                     
+                
                 if candidates:
                     errors = check(tfs, candidates)
                     if len(errors)>0:
-                        errors_string = errors2string(errors)
-                        # Key para o dicionario 'data_errors'
+                        # Key para o dicionario 'data_errors', Divergence
                         key = f"DI-{token}"
-                        msg = msg + " ['%s' %s] " %(token, errors_string)
+                        msg = msg + " ['%s' %s] " %(token, errors2string(errors))
                         flag = True
                 else:
-                    # Key para o dicionario 'data_errors'
+                    # Key para o dicionario 'data_errors', Not found
                     key = f"NF-{token}"
-                    
                     msg = msg + " ['%s' NF] " % token
                     flag = True
-        
-        if flag:
-            print(msg)
-            # Para um mesmo erro, adiciona todas ocorrências
+            
+            # Se não encontrou nenhum erro, prox iteracao
+            if not flag: continue
+            
+            # Mostra erro na tela
+            # print(msg)
+            
+            # Para um mesmo erro, concatena uma lista com todas ocorrências
             if not key in data_errors:
                 data_errors[key] = [f"{msg}"]
             else:
@@ -143,35 +147,48 @@ def proc1(morpho, content):
                     
 
 def execute():
-    # morpho = {}
     morpho = readMorpho(sys.argv[1])
     errors = {}
     
-
     for path in sys.argv[2:]:
-        with open(path,  encoding="utf8") as content:
+        with open(path, encoding="utf8") as content:
             erro_file = proc1(morpho, content)
+            file_name = path.split("\\")[-1].split(".")[0]
             
             # Aqui para baixo concatena os erros em um dicionario maior para 
-            # imprimir no final, após achar todos erros de um mesmo tipo em um arquivo
-            # (talvez seja bom especificar o arquivo)
+            # imprimir no final, após achar todos erros de um mesmo tipo
+            # em todos possiveis arquivos
             for key, value in erro_file.items():
-                if key in errors:
-                    errors[key] = errors[key]  + value
+                if not key in errors:
+                    errors[key] = {f"{file_name}": value}
                 else:
-                    errors[key] = value
+                    if f"{file_name}" in errors[key]:
+                        errors[key][f"{file_name}"] += value
+                    else:
+                        errors[key][f"{file_name}"] = value
+                    
+    # Ordena o dict em ordem de maior ocorrencia do erro, depois de agrupar
+    # por tipo de erro
+    errors = dict(sorted(errors.items(), key=lambda x: (x[0][:1], sum(len(y) for y in x[1].values())), reverse = True) )
     
+    # Escreve erros em data.json no formato "error":{"arquivo": [ocorrencias]}
+    with open("./data.json", "w", encoding="utf8") as f:
+        json.dump(errors, f)
+    
+    ################### ESCREVE DATA.TXT PARA FACILITAR VISUALIZAÇÃO
     with open("./data.txt", "w", encoding = "utf8") as f:
-        # Ordena o dict em ordem de maior ocorrencia do erro
-        errors = dict(sorted(errors.items(), key=lambda x:len(x[1]), reverse=True))
         for e in errors:
-            # Escreve arquivo no diretorio corrente.
-            f.write(f"{e} {len(errors[e])}\n")
-            for txt in errors[e]:
-                f.write(f"\t{txt}\n")
-            f.write("\n\n")
-        
+            type_error = e.replace("NF-", "Not found ") if e.startswith("NF") else e.replace("DI-", "Divergence ")
+            f.write(f"type errors: {type_error} [{len(errors[e])}-arquivos]\n")
             
+            for file in errors[e]:
+                f.write(f"    file name: {file} [{len(errors[e][file])}-erros]\n")
+                
+                for err in errors[e][file]:
+                    err = err.replace("\n", "")
+                    f.write(f"        {err}\n")
+                
+            f.write("\n")
 
 def usage():
     print("\nUsage:\n\tpython check.py path-morphobr conllu1 conllu2 ... \n\n")
