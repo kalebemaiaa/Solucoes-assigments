@@ -1,0 +1,11 @@
+1- A imagem "first.png" serve apenas para mostrar que o bubble e o merge sort estão gerando o mesmo resultado.
+2- Para comparar o tempo, achei mais rápidoar um script python para gerar as palavras aleatórias, um codigo semelhante estava sendo bem lento.
+
+- Uso do script-
+    Digite:
+        python geraPalavras.py
+    
+    Após isso, digite um inteiro qualquer maior que 0.
+    Vai ser gerado um arquivo no formato txt, agora basta compilar o codigo cpp, executar e inserir o nome do arquivo txt gerado quando o programa pedir.
+
+3- Tambem e possivel usar isso nos outros problemas.
